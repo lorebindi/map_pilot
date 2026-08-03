@@ -1,0 +1,842 @@
+1,267,359.3381884477975,Strada Provinciale Cucigliana-Lorenzana,secondary
+1,285,43.08872118396761,Unnamed,secondary
+2,282,31.691172117943392,Unnamed,secondary
+2,241,38.67889032416852,Via Lavoria,secondary
+3,370,178.0999761734041,Via Lavoria,secondary
+3,243,136.976779045851,Unnamed,unclassified
+3,145,79.0910519747577,Unnamed,secondary
+4,329,2689.985969243773,Via Stradiola,tertiary
+4,19,2268.3977074039367,Strada Provinciale 31 Cucigliana Lorenzana,secondary
+4,93,1574.423253087115,Strada Provinciale 31 Cucigliana Lorenzana,secondary
+5,69,364.18356728182977,Via Bruno Buozzi,tertiary
+5,6,961.6103466800505,Strada Provinciale 31 Cucigliana Lorenzana,secondary
+5,223,1005.7776128461419,Strada Provinciale 31 Cucigliana Lorenzana,secondary
+6,169,263.23560472794634,Strada Provinciale 21 del Piano della Tora,secondary
+6,246,69.85515136483832,Unnamed,secondary
+6,5,961.6103466800505,Strada Provinciale 31 Cucigliana Lorenzana,secondary
+7,66,125.4578129001653,Via Piano della Tora,secondary
+7,247,13.636462647113508,Unnamed,secondary
+8,289,14.944638818081684,Strada Provinciale 43 di Orciano,secondary
+8,118,34.32514907339257,Via Piano della Tora,secondary
+8,117,16.695328187758353,Via Nuova Pisana Livornese,tertiary
+9,11,180.48052748728196,Strada di Grande Comunicazione Firenze-Pisa-Livorno,trunk
+9,287,133.2500750822996,Unnamed,trunk_link
+10,0,179.90844698978253,Strada di Grande Comunicazione Firenze-Pisa-Livorno,trunk
+10,265,152.24237607669656,Unnamed,trunk_link
+12,137,789.9483465237713,Unnamed,secondary
+12,61,396.8541258701508,Strada Provinciale 43 di Orciano,secondary
+13,336,19.8720549835826,Unnamed,secondary
+13,295,44.142671425730335,Unnamed,secondary
+13,335,25.083822630425395,Unnamed,tertiary
+14,226,136.46808444647584,Unnamed,residential
+14,15,79.71489840542021,Via Roma,secondary
+14,112,284.28525706977945,Via Roma,secondary
+15,106,1231.8809261693411,Viale Prata,unclassified
+15,14,79.71489840542021,Via Roma,secondary
+16,88,113.4504985443073,Unnamed,unclassified
+16,87,284.1693919781504,Strada Provinciale 35 delle colline di Lari,secondary
+16,85,217.55486475018625,Strada Provinciale 35 delle colline di Lari,secondary
+17,18,423.7463058923458,Via Silvestro Lega,secondary
+17,18,423.8182516373231,Via Monte Grappa,unclassified
+17,108,112.76282133852132,Via Silvestro Lega,secondary
+18,17,423.74630589234584,Via Silvestro Lega,secondary
+18,112,548.8279033901783,Via Roma,secondary
+19,80,442.34625602364525,Strada Provinciale 35 delle colline di Lari,secondary
+19,157,974.1431789928689,Strada Provinciale 31 Cucigliana Lorenzana,secondary
+19,4,2268.3977074039362,Strada Provinciale 31 Cucigliana Lorenzana,secondary
+19,83,856.2616783606766,Via Querciole,secondary
+20,78,137.53080431522847,Corso della Repubblica,tertiary
+20,83,1127.6673491643655,Via Querciole,secondary
+20,129,180.04350040686845,Via Sorbo,secondary
+21,143,757.3782416399052,Unnamed,unclassified
+21,344,233.47552023224424,Via La Leccia,secondary
+21,346,595.5260580882218,Via La Leccia,secondary
+22,218,34.829373380840195,Via Zavagno,unclassified
+22,53,69.50146803861868,Via Zavagno,unclassified
+22,52,192.7944070913278,Via Toscanini,residential
+23,201,67.35919878560813,Via Zavagno,unclassified
+23,212,52.561017392177796,Via Zavagno,residential
+23,197,172.5141287697075,Via Zavagno,unclassified
+24,197,74.53880419561503,Via Zavagno,unclassified
+24,25,277.8587361907442,Via Giovanni Zavagno,unclassified
+25,147,320.5546397849695,Unnamed,secondary
+25,275,495.2491453669968,Unnamed,secondary
+26,142,2075.1396401149327,Via di Conella,residential
+26,27,905.2627948441764,Via Fondo la Grotta,secondary
+26,299,114.86760449453844,Via Fondo la Grotta,secondary
+27,312,220.13155413017654,Via Fondo la Grotta,secondary
+27,26,905.2627948441764,Via Fondo la Grotta,secondary
+27,134,13.12155396097177,Via Comunale,tertiary
+28,320,1680.2311610798324,Strada Provinciale 21 del Piano della Tora,secondary
+28,249,1348.5893408227694,Via Postignano Prima,residential
+28,312,270.48024375843886,Via Fondo la Grotta,secondary
+29,32,440.9672883948909,Via i Pinucci,tertiary
+29,113,880.9502580314543,Via i Pinucci,tertiary
+29,31,633.0977562906497,Viale Prata,unclassified
+30,36,203.68570561690564,Via Volpaia,tertiary
+31,111,1018.580239733917,Via Pettinuccio,unclassified
+31,105,204.49338161314296,Viale Prata,unclassified
+31,29,633.0977562906497,Viale Prata,unclassified
+32,151,935.8068308403841,Viale Lame,tertiary
+32,155,499.0684336921388,Via Siberia,tertiary
+32,29,440.9672883948908,Via i Pinucci,tertiary
+32,36,1372.2853093487288,Via Volpaia,tertiary
+33,35,319.64751710951134,Unnamed,unclassified
+33,154,582.1250920731101,Strada Provinciale 12 delle Colline per Livorno,secondary
+34,41,9.503699314263994,Strada Provinciale 12 delle Colline per Livorno,secondary
+34,323,43.912881824077594,Strada Provinciale 12 delle Colline per Livorno,secondary
+34,48,148.48344631648644,Via Giacomo Brodolini,residential
+35,36,62.6586861685634,Via Volpaia,unclassified
+35,324,310.3799405536366,Via Volpaia,unclassified
+35,33,319.64751710951134,Unnamed,unclassified
+36,35,62.6586861685634,Via Volpaia,unclassified
+36,32,1372.2853093487292,Via Volpaia,tertiary
+36,30,203.68570561690564,Via Volpaia,tertiary
+37,38,135.52024880379182,Via Giacomo Matteotti,residential
+37,208,196.2403855406471,Via Giacomo Matteotti,residential
+38,363,187.47354008901493,Via Guido Rossa,residential
+38,37,135.52024880379182,Via Giacomo Matteotti,residential
+38,315,83.7307349996467,Via Giacomo Matteotti,residential
+39,49,252.18597622337563,Via Giacomo Brodolini,residential
+39,40,259.85770676089896,Viale Lame,tertiary
+39,316,76.72057923009191,Viale Lame,tertiary
+40,214,43.76277925872284,Viale Lame,tertiary
+40,209,45.01314078971627,Via Giuseppe Verdi,residential
+40,39,259.85770676089896,Viale Lame,tertiary
+41,56,35.010023561375206,Strada Provinciale 12 delle Colline per Livorno,secondary
+41,34,9.503699314263994,Strada Provinciale 12 delle Colline per Livorno,secondary
+41,42,135.62736723812972,Via Giulio Pastore,residential
+42,317,208.5661502009501,Via Pietro Nenni,residential
+42,41,135.62736723812972,Via Giulio Pastore,residential
+42,48,36.58459171994578,Via Giulio Pastore,residential
+43,204,31.573022624407713,Via Aldo Moro,tertiary
+43,46,160.3952348144986,Via Giuseppe Verdi,residential
+43,47,103.66005519880568,Via Aldo Moro,tertiary
+44,149,124.25776801923098,Via Salvador Allende,residential
+44,37,116.92732361108952,Via Salvador Allende,residential
+44,45,205.6464769782297,Via Aldo Moro,tertiary
+44,204,50.53508067368571,Via Aldo Moro,tertiary
+45,51,119.35139775828665,Via Giovanni Falcone,residential
+45,251,244.1271279784937,Via Aldo Moro,tertiary
+45,44,205.6464769782297,Via Aldo Moro,tertiary
+46,209,402.66797526848563,Via Giuseppe Verdi,residential
+46,43,160.3952348144986,Via Giuseppe Verdi,residential
+46,47,96.94467160981105,Via Pietro Mascagni,residential
+47,314,10.239242199549391,Via Aldo Moro,tertiary
+47,43,103.66005519880568,Via Aldo Moro,tertiary
+48,49,44.66406578019722,Via Giacomo Brodolini,residential
+48,34,148.48344631648644,Via Giacomo Brodolini,residential
+48,42,36.58459171994578,Via Giulio Pastore,residential
+49,39,252.18597622337563,Via Giacomo Brodolini,residential
+49,48,44.66406578019722,Via Giacomo Brodolini,residential
+49,153,346.7549428574034,Via Pennati,residential
+50,51,55.870594823386696,Unnamed,residential
+51,50,55.870594823386696,Unnamed,residential
+51,45,119.35139775828665,Via Giovanni Falcone,residential
+51,253,111.07619747157506,Via Giovanni Falcone,residential
+52,251,89.71615619589808,Via Alcide De Gasperi,residential
+52,22,192.7944070913278,Via Toscanini,residential
+52,53,136.48801005544277,Via Giovanni XXIII,residential
+53,22,69.5014680386187,Via Zavagno,unclassified
+53,252,103.87285926126701,Via Zavagno,unclassified
+53,52,136.48801005544277,Via Giovanni XXIII,residential
+53,217,105.31518058731831,Via Palmiro Togliatti,residential
+54,198,404.20377347035003,Via Dante Alighieri,residential
+54,198,223.62215108524452,Via Palmiro Togliatti,residential
+54,217,96.33724916897731,Via Palmiro Togliatti,residential
+55,54,105.86264214830169,Via Dante Alighieri,residential
+55,253,112.31477297679636,Strada Provinciale 12 delle Colline per Livorno,secondary
+55,208,80.16136609954296,Strada Provinciale 12 delle Colline per Livorno,secondary
+56,41,35.010023561375206,Strada Provinciale 12 delle Colline per Livorno,secondary
+56,57,37.51584133877011,Strada Provinciale 12 delle Colline per Livorno,secondary
+57,349,47.16020370251296,Strada Provinciale 12 delle Colline per Livorno,secondary
+57,56,142.55747775650605,Piazza Giuseppe Di Vittorio,residential
+57,56,37.5158413387701,Strada Provinciale 12 delle Colline per Livorno,secondary
+58,99,1049.00975095791,Via La Leccia,secondary
+59,190,2020.7687042863338,Via dei Poggetti,unclassified
+59,100,438.0702019427857,Via dei Poggetti,tertiary
+59,362,482.684098681905,Via dei Poggetti,unclassified
+60,64,594.5773061281034,Unnamed,tertiary
+60,288,223.7875375866638,Unnamed,tertiary
+60,294,362.7705840801236,Unnamed,unclassified
+61,294,365.2232818162451,Unnamed,unclassified
+61,12,396.8541258701508,Strada Provinciale 43 di Orciano,secondary
+61,292,312.47084506405275,Strada Provinciale 43 di Orciano,secondary
+62,63,6.649094457790276,Via Fonda,tertiary
+62,125,299.2984582441694,Via Fonda,tertiary
+62,383,37.262930620499574,Unnamed,unclassified
+63,62,6.649094457790276,Via Fonda,tertiary
+63,121,78.97419541899437,Unnamed,tertiary
+63,124,49.42119066197201,Unnamed,residential
+64,60,594.5773061281034,Unnamed,tertiary
+64,173,24.868198073663308,Unnamed,tertiary
+65,162,222.99587867897128,Strada Provinciale 21 del Piano della Tora,secondary
+65,68,1437.3768460666329,Via di Borra,unclassified
+66,187,393.5569479826765,Via Piano della Tora,secondary
+66,7,125.4578129001653,Via Piano della Tora,secondary
+66,67,549.7646033649963,Via Fonda,tertiary
+67,125,57.264588945261984,Via Fonda,tertiary
+67,66,549.7646033649964,Via Fonda,tertiary
+67,187,496.7205543280653,Via della Fonte,residential
+68,65,1437.3768460666329,Via di Borra,tertiary
+68,86,1680.9113028763527,Via di Borra,unclassified
+68,188,1074.7835943765758,Via Collicchio,tertiary
+69,5,364.18356728182977,Via Bruno Buozzi,tertiary
+69,290,167.4162302037679,Via Bruno Buozzi,tertiary
+69,188,85.18169545864875,Via Collicchio,tertiary
+70,71,155.08081395477308,Via Pantane,unclassified
+71,101,95.84411199263718,Via Pantane,unclassified
+71,70,155.08081395477308,Via Pantane,unclassified
+71,190,1338.3872870837047,Unnamed,unclassified
+72,150,391.4583909417159,Via Guglielmo Marconi,secondary
+72,179,1126.9227900042758,Via Guglielmo Marconi,secondary
+72,128,386.4766291418915,Via Valleregli,tertiary
+73,82,172.8124083890891,Via Casaferri,tertiary
+73,176,133.7448475423163,Via Sorbo,secondary
+73,101,1436.3438988816067,Via Sorbo,secondary
+74,75,45.11249133253645,Corso della Repubblica,tertiary
+74,77,229.00248296240972,Corso della Repubblica,tertiary
+74,224,183.4011618959484,Vicolo Bocci,residential
+75,74,45.11249133253645,Corso della Repubblica,tertiary
+75,221,168.63186482543307,Via Valleregli,tertiary
+75,368,3262.1073993247596,Via Pontita,unclassified
+76,77,29.29259538400448,Corso della Repubblica,tertiary
+76,78,121.3516433990236,Corso della Repubblica,tertiary
+76,227,90.96055986829344,Via Chiostra Prima,residential
+77,76,29.29259538400448,Corso della Repubblica,tertiary
+77,74,229.00248296240977,Corso della Repubblica,tertiary
+77,222,55.29982380515866,Vicolo del Teatro,residential
+78,76,121.3516433990236,Corso della Repubblica,tertiary
+78,20,137.5308043152285,Corso della Repubblica,tertiary
+78,79,229.309782668842,Via della Colombaia,unclassified
+79,78,229.309782668842,Via della Colombaia,unclassified
+80,85,892.4973942089762,Strada Provinciale 35 delle colline di Lari,secondary
+80,19,442.3462560236452,Strada Provinciale 35 delle colline di Lari,secondary
+80,225,1779.1290732866892,Via Vicchio,unclassified
+81,184,379.1460903735321,Via Casaferri,tertiary
+81,92,2995.196168212467,Via Pugnano,tertiary
+82,174,8.4886619908763,Via Casaferri,tertiary
+82,73,172.81240838908911,Via Casaferri,tertiary
+82,166,174.77788669194007,Unnamed,residential
+83,368,25.374858134455714,Via Augusto Bellini Pietri,unclassified
+83,19,856.2616783606767,Via Querciole,secondary
+83,20,1127.667349164365,Via Querciole,secondary
+84,85,130.15443309419032,Unnamed,unclassified
+85,84,130.15443309419032,Unnamed,unclassified
+85,16,217.5548647501862,Strada Provinciale 35 delle colline di Lari,secondary
+85,80,892.4973942089762,Strada Provinciale 35 delle colline di Lari,secondary
+86,225,868.5984537978752,Via Vicchio,unclassified
+86,68,1680.911302876353,Via di Borra,unclassified
+87,89,907.7941132035446,Via La Capannina,tertiary
+87,255,591.349619090658,Strada Provinciale 35 delle colline di Lari,secondary
+87,16,284.16939197815043,Strada Provinciale 35 delle colline di Lari,secondary
+88,16,113.45049854430732,Unnamed,unclassified
+89,329,63.04287362930749,Via i Gioielli,tertiary
+89,87,907.7941132035445,Via La Capannina,tertiary
+89,90,508.2733067176424,Via Siberia,tertiary
+90,155,717.8082505333822,Via Siberia,tertiary
+90,328,743.0920242845428,Unnamed,residential
+90,89,508.27330671764247,Via Siberia,tertiary
+91,245,60.87210845549652,Unnamed,residential
+91,94,52.327099006740966,Via Pugnano,tertiary
+91,92,397.2634507706,Via Pugnano,tertiary
+92,143,710.7944466338824,Via Mediana,unclassified
+92,91,397.2634507706,Via Pugnano,tertiary
+92,81,2995.1961682124675,Via Pugnano,tertiary
+93,143,49.30911632229904,Via Mediana,unclassified
+93,4,1574.4232530871152,Strada Provinciale 31 Cucigliana Lorenzana,secondary
+93,276,551.8895195155015,Strada Provinciale 31 Cucigliana Lorenzana,secondary
+94,244,78.49142977314253,Unnamed,residential
+94,156,75.0552900006145,Via Pugnano,tertiary
+94,91,52.327099006740966,Via Pugnano,tertiary
+95,365,43.32220051624171,Via Pugnano,tertiary
+95,233,27.11805398384956,Via Pugnano,tertiary
+95,364,28.428685189575024,Piazza Torello Pierazzi,residential
+96,230,44.4643416395854,Via Giorgio Kienerk,residential
+97,240,78.27023087086,Via Pugnano,tertiary
+97,148,75.90171564547316,Via Giorgio Kienerk,residential
+97,381,49.72673441660081,Via Pugnano,tertiary
+98,380,23.75362109090316,Via Valtriano,residential
+98,381,3.9257253577007774,Via La Leccia,secondary
+98,379,15.989305634357695,Via La Leccia,secondary
+99,379,204.95557729723686,Via La Leccia,secondary
+99,58,1049.0097509579098,Via La Leccia,secondary
+99,339,162.75171742715202,Unnamed,residential
+100,59,438.0702019427856,Via dei Poggetti,tertiary
+100,190,802.1752428007874,Via delle Fornacelle,residential
+101,71,95.84411199263718,Via Pantane,unclassified
+101,73,1436.3438988816065,Via Sorbo,secondary
+102,104,124.37971824671436,Via il Colle,residential
+102,195,124.1348811101592,Via Ventuno Aprile,tertiary
+102,111,335.34645536416156,Via i Pinucci,tertiary
+103,104,76.43328089757756,Unnamed,residential
+104,103,76.43328089757756,Unnamed,residential
+104,102,124.37971824671436,Via il Colle,residential
+104,105,1040.9658337959893,Via il Colle,residential
+105,104,1040.965833795989,Via il Colle,residential
+105,106,71.42320310165476,Viale Prata,unclassified
+105,31,204.49338161314296,Viale Prata,unclassified
+106,15,1231.880926169341,Viale Prata,unclassified
+106,105,71.42320310165476,Viale Prata,unclassified
+107,130,740.2527035494556,Unnamed,unclassified
+107,109,132.1644154048978,Via San Rocco,unclassified
+108,17,112.76282133852129,Via Silvestro Lega,secondary
+108,109,156.40515759339053,Via San Rocco,unclassified
+108,254,209.6742298347116,Strada Provinciale 35 delle colline di Lari,secondary
+109,254,179.4106039900587,Via Bugallo,unclassified
+109,108,156.40515759339053,Via San Rocco,unclassified
+109,107,132.16441540489777,Via San Rocco,unclassified
+110,112,143.33010823939748,Via Fonda,residential
+111,31,1018.5802397339168,Via Pettinuccio,unclassified
+111,113,204.59540880740659,Via i Pinucci,tertiary
+111,102,335.3464553641615,Via i Pinucci,tertiary
+112,110,143.33010823939748,Via Fonda,residential
+112,195,155.26017690506157,Via Ventuno Aprile,tertiary
+112,18,548.8279033901783,Via Roma,secondary
+112,14,284.28525706977945,Via Roma,secondary
+113,29,880.9502580314545,Via i Pinucci,tertiary
+113,111,204.59540880740659,Via i Pinucci,tertiary
+113,114,308.55908477561036,Unnamed,unclassified
+114,113,308.55908477561036,Unnamed,unclassified
+115,118,35.94483719245605,Via Nuova Pisana Livornese,tertiary
+115,8,19.715038196275543,Via Nuova Pisana Livornese,tertiary
+115,116,27.058104767719534,Via Nuova Pisana Livornese,tertiary
+116,171,261.98436967258897,Via Nuova Pisana Livornese,tertiary
+116,115,27.058104767719534,Via Nuova Pisana Livornese,tertiary
+116,117,27.307990468843563,Via Nuova Pisana Livornese,tertiary
+117,289,17.087455472859496,Via Nuova Pisana Livornese,tertiary
+117,116,27.307990468843563,Via Nuova Pisana Livornese,tertiary
+118,8,34.32514907339257,Via Piano della Tora,secondary
+118,187,120.11665689157226,Via Piano della Tora,secondary
+119,383,173.58376883715837,Unnamed,unclassified
+120,121,26.608657364072947,Unnamed,tertiary
+120,122,29.29214238086199,Unnamed,unclassified
+120,288,98.77580337207513,Unnamed,tertiary
+121,120,26.608657364072947,Unnamed,tertiary
+121,123,25.11622716458001,Unnamed,unclassified
+121,63,78.97419541899438,Unnamed,tertiary
+122,120,29.29214238086199,Unnamed,unclassified
+122,288,159.56470011937876,Unnamed,residential
+122,123,25.128842046426143,Unnamed,residential
+123,121,25.11622716458001,Unnamed,unclassified
+123,122,25.128842046426143,Unnamed,residential
+123,124,68.86821901675519,Unnamed,residential
+124,123,68.86821901675519,Unnamed,residential
+124,63,49.42119066197201,Unnamed,residential
+124,311,45.565730612597406,Unnamed,residential
+125,62,299.2984582441694,Via Fonda,tertiary
+125,67,57.264588945261984,Via Fonda,tertiary
+125,384,242.90803801462056,Via Nuova Pisana Livornese,tertiary
+126,248,119.46595231859837,Via Fausto Coppi,residential
+127,128,1929.453372059787,Via Scacciapolli,unclassified
+128,127,1929.453372059786,Via Scacciapolli,unclassified
+128,72,386.4766291418915,Via Valleregli,tertiary
+128,309,568.0727084879782,Via Valleregli,tertiary
+129,168,136.22508738442514,Via del Sassone,unclassified
+129,20,180.04350040686845,Via Sorbo,secondary
+129,176,24.929501226821642,Via Sorbo,secondary
+130,107,740.2527035494559,Unnamed,unclassified
+131,135,1021.1819420658743,Via Santo Regolo,tertiary
+131,141,576.3015571183131,Via Santo Regolo,residential
+132,258,78.0187092245325,Via del Camposanto,tertiary
+133,134,514.0297693798103,Via Comunale,tertiary
+133,351,311.7306402361109,Via Comunale,tertiary
+134,133,210.94956021662293,Via Comunale,tertiary
+134,27,13.12155396097177,Via Comunale,tertiary
+135,350,1536.8772289318258,Via Casetta,tertiary
+135,131,1021.1819420658745,Via Santo Regolo,tertiary
+135,142,784.964445144806,Via Malacoda,unclassified
+136,140,817.1082560096338,Unnamed,residential
+136,137,146.49980778578444,Unnamed,unclassified
+137,175,506.93618337050384,Unnamed,secondary
+137,12,789.9483465237713,Unnamed,secondary
+137,136,146.49980778578444,Unnamed,unclassified
+138,298,2190.1521308996803,Via delle Macchie,residential
+139,171,310.83899678873377,Via Vecchia Pisana Livornese,residential
+139,291,228.11960107641625,Strada Provinciale 43 di Orciano,secondary
+139,289,189.46244178526877,Strada Provinciale 43 di Orciano,secondary
+140,325,537.0189854067281,Unnamed,residential
+140,256,834.6804639571806,Unnamed,residential
+140,136,817.1082560096336,Unnamed,residential
+141,131,576.3015571183132,Via Santo Regolo,residential
+142,308,644.7861236516532,Via di Conella,residential
+142,26,2075.1396401149327,Via di Conella,residential
+142,135,784.9644451448063,Via Malacoda,unclassified
+143,93,49.30911632229904,Via Mediana,unclassified
+143,92,710.7944466338823,Via Mediana,unclassified
+144,146,278.1163328350753,Via Lavoria,unclassified
+145,146,98.93226430758882,Unnamed,unclassified
+145,3,79.0910519747577,Unnamed,secondary
+145,147,323.99896008039974,Unnamed,secondary
+146,145,98.93226430758882,Unnamed,unclassified
+146,147,341.10286317439136,Via Lavoria,unclassified
+146,144,278.11633283507535,Via Lavoria,unclassified
+147,146,341.10286317439136,Via Lavoria,unclassified
+147,145,323.9989600803997,Unnamed,secondary
+147,25,320.5546397849695,Unnamed,secondary
+148,228,81.32839904288385,Via Giorgio Kienerk,residential
+148,97,75.90171564547316,Via Giorgio Kienerk,residential
+148,229,181.18100435461412,Via Giorgio Kienerk,residential
+149,44,124.25776801923098,Via Salvador Allende,residential
+150,305,46.24608554703549,Via Guglielmo Marconi,secondary
+150,72,391.45839094171595,Via Guglielmo Marconi,secondary
+150,298,117.31884820251886,Via delle Macchie,residential
+151,154,1052.5565513126608,Unnamed,residential
+151,32,935.8068308403844,Viale Lame,tertiary
+151,214,1054.3991320880798,Viale Lame,tertiary
+152,210,25.842761346815564,Via Palmiro Togliatti,residential
+152,196,131.41198375717806,Via Palmiro Togliatti,residential
+152,323,196.08412025309624,Via Palmiro Togliatti,residential
+153,49,346.7549428574034,Via Pennati,residential
+154,151,1052.556551312661,Unnamed,residential
+154,323,1452.05717071168,Strada Provinciale 12 delle Colline per Livorno,secondary
+154,33,582.1250920731101,Strada Provinciale 12 delle Colline per Livorno,secondary
+155,32,499.0684336921389,Via Siberia,tertiary
+155,90,717.8082505333822,Via Siberia,tertiary
+155,334,1120.2713287596944,Via la Tana,unclassified
+156,232,184.69468332902053,Via Filippo Mazzei,residential
+156,239,24.99064829175345,Via Pugnano,tertiary
+156,94,75.0552900006145,Via Pugnano,tertiary
+157,158,397.0615961675212,Unnamed,residential
+157,223,942.2113654099646,Strada Provinciale 31 Cucigliana Lorenzana,secondary
+157,19,974.1431789928689,Strada Provinciale 31 Cucigliana Lorenzana,secondary
+158,157,397.0615961675211,Unnamed,residential
+159,182,14.231631102933832,Unnamed,secondary
+159,189,19.207186442932695,Strada Provinciale 21 del Piano della Tora,secondary
+159,162,36.761151897157326,Strada Provinciale 21 del Piano della Tora,secondary
+160,159,19.533890315443706,Unnamed,secondary
+160,162,41.30546485668889,Unnamed,secondary
+161,165,16.35547665349416,Unnamed,unclassified
+161,181,701.8296507929724,Via Karol Wojtyla,unclassified
+162,159,36.761151897157326,Strada Provinciale 21 del Piano della Tora,secondary
+162,65,222.99587867897125,Strada Provinciale 21 del Piano della Tora,secondary
+163,179,19.279624200170613,Strada Provinciale 21 del Piano della Tora,secondary
+163,169,31.06397070611165,Strada Provinciale 21 del Piano della Tora,secondary
+163,183,16.076514028213083,Unnamed,unclassified
+164,291,116.53987800649365,Via delle Biancanelle,residential
+164,172,132.79954486035876,Via delle Biancanelle,residential
+164,293,101.06876079507566,Via delle Biancanelle,residential
+165,179,15.955488786383638,Unnamed,unclassified
+165,163,22.636708475256885,Unnamed,unclassified
+166,170,143.48740188209652,Unnamed,residential
+166,184,253.17965608383597,Unnamed,residential
+166,82,174.77788669194007,Unnamed,residential
+167,178,16.289734245182004,Unnamed,residential
+168,129,136.22508738442514,Via del Sassone,unclassified
+169,183,32.632728040087876,Unnamed,unclassified
+169,6,263.23560472794645,Strada Provinciale 21 del Piano della Tora,secondary
+169,163,31.06397070611165,Strada Provinciale 21 del Piano della Tora,secondary
+170,166,143.4874018820965,Unnamed,residential
+171,116,261.984369672589,Via Nuova Pisana Livornese,tertiary
+171,384,312.42483459214674,Via Nuova Pisana Livornese,tertiary
+171,139,310.8389967887337,Via Vecchia Pisana Livornese,residential
+172,164,132.79954486035876,Via delle Biancanelle,residential
+173,175,21.38996860173006,Unnamed,tertiary
+173,336,14.077091356676627,Unnamed,tertiary
+174,82,8.4886619908763,Via Casaferri,tertiary
+174,178,35.28273662635148,Unnamed,residential
+174,184,242.38685496665005,Via Casaferri,tertiary
+175,336,20.236788945961926,Unnamed,secondary
+175,137,506.9361833705039,Unnamed,secondary
+176,185,147.07698980343287,Unnamed,residential
+176,129,24.929501226821642,Via Sorbo,secondary
+176,73,133.7448475423163,Via Sorbo,secondary
+177,188,179.8487434199605,Unnamed,residential
+178,174,35.28273662635148,Unnamed,residential
+178,167,16.289734245182004,Unnamed,residential
+178,180,85.38269248756487,Unnamed,residential
+179,163,19.279624200170613,Strada Provinciale 21 del Piano della Tora,secondary
+179,72,1126.9227900042756,Via Guglielmo Marconi,secondary
+180,178,85.38269248756487,Unnamed,residential
+181,161,701.8296507929724,Via Karol Wojtyla,unclassified
+182,186,28.053359267692457,Unnamed,secondary
+183,161,30.06366118749299,Unnamed,unclassified
+184,81,379.1460903735321,Via Casaferri,tertiary
+184,174,242.38685496665008,Via Casaferri,tertiary
+184,166,253.17965608383597,Unnamed,residential
+185,176,147.07698980343284,Unnamed,residential
+186,295,95.29886150043595,Unnamed,secondary
+186,160,28.280108836465722,Unnamed,secondary
+187,118,120.11665689157225,Via Piano della Tora,secondary
+187,66,393.55694798267643,Via Piano della Tora,secondary
+187,67,496.72055432806536,Via della Fonte,residential
+188,177,179.8487434199605,Unnamed,residential
+188,69,85.18169545864875,Via Collicchio,tertiary
+188,68,1074.7835943765756,Via Collicchio,unclassified
+189,159,19.207186442932695,Strada Provinciale 21 del Piano della Tora,secondary
+189,182,14.788018931451196,Unnamed,secondary
+189,247,2281.528040166977,Strada Provinciale 21 del Piano della Tora,secondary
+190,59,2020.768704286333,Via dei Poggetti,residential
+190,71,1338.387287083705,Unnamed,unclassified
+190,100,802.1752428007875,Via delle Fornacelle,residential
+191,192,1111.8291789365182,Via dei Poggetti,residential
+192,193,184.40912056753342,Via dei Poggetti,unclassified
+192,191,1111.8291789365173,Via dei Poggetti,residential
+192,361,89.06243977507324,Via dei Poggetti,residential
+193,362,138.75467413807257,Via dei Poggetti,unclassified
+193,362,213.02751944828188,Via dei Poggetti,residential
+193,192,184.40912056753336,Via dei Poggetti,unclassified
+194,195,63.23295438049876,Via le Mura,residential
+195,102,124.1348811101592,Via Ventuno Aprile,tertiary
+195,112,155.26017690506157,Via Ventuno Aprile,tertiary
+195,194,63.232954380498754,Via le Mura,residential
+196,152,131.4119837571781,Via Palmiro Togliatti,residential
+197,24,74.53880419561503,Via Zavagno,unclassified
+197,23,172.5141287697075,Via Zavagno,unclassified
+197,211,86.2522040449232,Via Zavagno,residential
+198,210,45.090340217219094,Via Palmiro Togliatti,residential
+198,54,404.2037734703501,Via Dante Alighieri,residential
+198,54,223.62215108524452,Via Palmiro Togliatti,residential
+199,207,55.8239763238191,Via Palmiro Togliatti,residential
+200,218,78.73338753759161,Via Zavagno,residential
+201,23,67.35919878560813,Via Zavagno,unclassified
+201,219,38.394142381722446,Via Zavagno,residential
+201,218,90.47505334475505,Via Zavagno,unclassified
+202,209,108.03292679876121,Unnamed,residential
+203,210,110.58228223621715,Via Palmiro Togliatti,residential
+204,43,31.573022624407713,Via Aldo Moro,tertiary
+204,213,121.4427794633526,Via Aldo Moro,residential
+204,44,50.53508067368571,Via Aldo Moro,tertiary
+205,214,154.07900364695507,Via Lustignano,residential
+206,250,161.1027411868859,Via Vittorio Veneto,residential
+207,199,55.8239763238191,Via Palmiro Togliatti,residential
+207,216,53.51696454717607,Via Palmiro Togliatti,residential
+207,217,51.339967909435906,Via Palmiro Togliatti,residential
+208,37,196.24038554064708,Via Giacomo Matteotti,residential
+208,55,80.16136609954296,Strada Provinciale 12 delle Colline per Livorno,secondary
+208,349,139.44352743678598,Strada Provinciale 12 delle Colline per Livorno,secondary
+209,202,108.03292679876121,Unnamed,residential
+209,40,45.01314078971627,Via Giuseppe Verdi,residential
+209,46,402.6679752684857,Via Giuseppe Verdi,residential
+210,203,110.58228223621715,Via Palmiro Togliatti,residential
+210,152,25.842761346815564,Via Palmiro Togliatti,residential
+210,198,45.090340217219094,Via Palmiro Togliatti,residential
+211,197,86.25220404492319,Via Zavagno,residential
+212,23,52.561017392177796,Via Zavagno,residential
+213,204,121.4427794633526,Via Aldo Moro,residential
+214,40,43.76277925872284,Viale Lame,tertiary
+214,151,1054.3991320880798,Viale Lame,tertiary
+214,205,154.07900364695504,Via Lustignano,residential
+215,218,45.15135082350768,Via Enrico Fermi,residential
+216,207,53.51696454717607,Via Palmiro Togliatti,residential
+217,207,51.339967909435906,Via Palmiro Togliatti,residential
+217,54,96.33724916897731,Via Palmiro Togliatti,residential
+217,53,105.31518058731831,Via Palmiro Togliatti,residential
+218,22,34.829373380840195,Via Zavagno,unclassified
+218,215,45.15135082350768,Via Enrico Fermi,residential
+218,200,78.73338753759161,Via Zavagno,residential
+218,201,90.47505334475505,Via Zavagno,unclassified
+219,201,38.394142381722446,Via Zavagno,residential
+219,219,104.97155374834725,Via Zavagno,residential
+219,219,104.97155374834725,Via Zavagno,residential
+220,221,103.48421012497684,Unnamed,residential
+221,220,103.48421012497683,Unnamed,residential
+221,309,1344.5925270842424,Via Valleregli,tertiary
+221,75,168.63186482543304,Via Valleregli,tertiary
+222,77,55.29982380515866,Vicolo del Teatro,residential
+223,225,818.6108706189916,Via Galliano,residential
+223,5,1005.7776128461419,Strada Provinciale 31 Cucigliana Lorenzana,secondary
+223,157,942.2113654099644,Strada Provinciale 31 Cucigliana Lorenzana,secondary
+224,74,183.40116189594838,Vicolo Bocci,residential
+225,86,868.5984537978752,Via Vicchio,unclassified
+225,80,1779.1290732866885,Via Vicchio,unclassified
+225,223,818.6108706189915,Via Galliano,residential
+226,14,136.4680844464758,Unnamed,residential
+227,76,90.96055986829344,Via Chiostra Prima,residential
+228,148,81.32839904288385,Via Giorgio Kienerk,residential
+228,230,27.41688243641625,Via Giorgio Kienerk,residential
+229,230,19.281321337329164,Via Giorgio Kienerk,residential
+229,228,31.510344761380264,Via Giorgio Kienerk,residential
+230,228,27.41688243641625,Via Giorgio Kienerk,residential
+230,96,44.4643416395854,Via Giorgio Kienerk,residential
+231,232,271.24609692387855,Via Filippo Mazzei,residential
+232,156,184.69468332902053,Via Filippo Mazzei,residential
+232,378,129.0377441100513,Via Filippo Mazzei,residential
+232,231,271.2460969238785,Via Filippo Mazzei,residential
+233,95,27.11805398384956,Via Pugnano,tertiary
+233,239,10.889131525026238,Via Pugnano,tertiary
+233,235,77.01523898069209,Via Fratelli Gioli,residential
+234,235,46.628996849845116,Via Fratelli Gioli,residential
+235,234,46.628996849845116,Via Fratelli Gioli,residential
+235,233,77.01523898069209,Via Fratelli Gioli,residential
+235,342,57.57230701629287,Via Fratelli Gioli,residential
+236,342,47.65073442137371,Via Fratelli Gioli,residential
+237,382,539.4503241178022,Via Galileo Galilei,unclassified
+237,283,30.368599545778547,Via Galileo Galilei,unclassified
+238,241,171.23674356047485,Via Lavoria,secondary
+239,233,10.889131525026238,Via Pugnano,tertiary
+239,156,24.99064829175345,Via Pugnano,tertiary
+240,97,78.27023087086,Via Pugnano,tertiary
+240,365,34.476943238680285,Via Pugnano,tertiary
+240,366,61.02260900290048,Unnamed,residential
+241,2,38.67889032416852,Via Lavoria,secondary
+241,238,171.23674356047485,Via Lavoria,secondary
+242,327,56.45491251311219,Unnamed,unclassified
+242,241,348.8146970623814,Unnamed,unclassified
+243,242,247.8805031429602,Unnamed,unclassified
+243,3,136.976779045851,Unnamed,unclassified
+244,94,78.49142977314253,Unnamed,residential
+245,91,60.87210845549652,Unnamed,residential
+246,7,15.833817491035227,Unnamed,secondary
+246,6,69.85515136483832,Unnamed,secondary
+247,189,2281.528040166976,Strada Provinciale 21 del Piano della Tora,secondary
+247,248,14.917423530529472,Unnamed,secondary
+248,126,119.46595231859837,Via Fausto Coppi,residential
+248,246,12.707540069303095,Unnamed,secondary
+249,28,1348.5893408227691,Via Postignano Prima,residential
+250,206,161.1027411868859,Via Vittorio Veneto,residential
+250,277,344.51200851244494,Strada Provinciale 12 delle Colline per Livorno,secondary
+250,251,168.31740263794612,Strada Provinciale 12 delle Colline per Livorno,secondary
+251,52,89.71615619589808,Via Alcide De Gasperi,residential
+251,252,146.65945710617757,Strada Provinciale 12 delle Colline per Livorno,secondary
+251,45,244.12712797849372,Via Aldo Moro,tertiary
+251,250,168.31740263794612,Strada Provinciale 12 delle Colline per Livorno,secondary
+252,53,103.87285926126701,Via Zavagno,unclassified
+252,251,146.6594571061776,Strada Provinciale 12 delle Colline per Livorno,secondary
+252,253,54.938730436132495,Strada Provinciale 12 delle Colline per Livorno,secondary
+253,51,111.07619747157506,Via Giovanni Falcone,residential
+253,252,54.938730436132495,Strada Provinciale 12 delle Colline per Livorno,secondary
+253,55,112.31477297679636,Strada Provinciale 12 delle Colline per Livorno,secondary
+254,109,179.4106039900587,Via Bugallo,unclassified
+254,108,209.67422983471164,Strada Provinciale 35 delle colline di Lari,secondary
+254,255,26.522675078905394,Strada Provinciale 35 delle colline di Lari,secondary
+255,331,294.8299757814153,Unnamed,unclassified
+255,254,26.522675078905394,Strada Provinciale 35 delle colline di Lari,secondary
+255,87,591.3496190906582,Strada Provinciale 35 delle colline di Lari,secondary
+256,140,834.6804639571807,Unnamed,residential
+257,258,130.87070763199813,Via del Camposanto,unclassified
+258,352,38.101188456499386,Via Comunale,tertiary
+258,257,130.87070763199813,Via del Camposanto,unclassified
+259,360,104.65171701706632,Via Roma,tertiary
+259,260,62.42575790887371,Via di Mezzo,residential
+260,132,12.087454580788068,Via di Mezzo,residential
+260,259,62.425757908873706,Via di Mezzo,residential
+261,333,1314.5207937894254,Strada vicinale dei Pianacci,residential
+262,267,56.262885940374304,Unnamed,secondary
+262,263,26.661032539172783,Unnamed,trunk_link
+262,348,76.09592635200435,Unnamed,secondary
+263,266,36.840104874033926,Unnamed,trunk_link
+264,262,19.50674650430067,Unnamed,trunk_link
+264,267,51.0399497484258,Unnamed,trunk_link
+265,0,115.80495706952692,Unnamed,trunk_link
+265,266,265.43554702320165,Unnamed,trunk_link
+266,264,44.77227094481969,Unnamed,trunk_link
+266,265,265.4355470232017,Unnamed,trunk_link
+267,1,359.33818844779745,Strada Provinciale Cucigliana-Lorenzana,secondary
+267,262,56.262885940374304,Unnamed,secondary
+268,274,4.556199104968952,Unnamed,secondary
+269,268,32.51348326925451,Unnamed,secondary
+269,275,36.96112002080565,Unnamed,secondary
+270,347,37.799115657662504,Unnamed,secondary
+270,277,42.48620005829906,Strada Provinciale 12 delle Colline per Livorno,secondary
+271,270,7.937970854366265,Unnamed,secondary
+272,271,33.00782797066061,Unnamed,secondary
+272,276,36.94285088847943,Strada Provinciale 31 Cucigliana Lorenzana,secondary
+273,272,7.518226417315519,Unnamed,secondary
+274,273,38.30859073049113,Unnamed,secondary
+274,346,53.55535410955598,Via La Leccia,secondary
+275,268,38.868932804922316,Unnamed,secondary
+275,25,495.2491453669968,Unnamed,secondary
+276,271,34.51365127413304,Strada Provinciale 31 Cucigliana Lorenzana,secondary
+276,93,551.8895195155017,Strada Provinciale 31 Cucigliana Lorenzana,secondary
+277,250,344.51200851244494,Strada Provinciale 12 delle Colline per Livorno,secondary
+277,347,47.74989600661792,Strada Provinciale 12 delle Colline per Livorno,secondary
+278,2,32.63643817788976,Unnamed,secondary
+278,282,19.68670435088505,Unnamed,secondary
+279,1,41.801101557786225,Unnamed,secondary
+279,285,22.7399150316019,Unnamed,secondary
+280,279,9.550637678222383,Unnamed,secondary
+281,280,28.351358870356375,Unnamed,secondary
+281,286,59.91819148681604,Unnamed,trunk_link
+282,281,18.31719950348005,Unnamed,secondary
+283,278,19.536049998508812,Unnamed,secondary
+284,283,19.628772015929087,Unnamed,secondary
+284,237,35.695538778867935,Via Galileo Galilei,unclassified
+285,284,12.530503035165447,Unnamed,secondary
+286,280,63.898285038214915,Unnamed,trunk_link
+286,287,177.56071836030296,Unnamed,trunk_link
+287,11,132.0571954138871,Unnamed,trunk_link
+287,286,177.560718360303,Unnamed,trunk_link
+288,60,223.7875375866638,Unnamed,tertiary
+288,120,98.77580337207513,Unnamed,tertiary
+288,122,159.56470011937876,Unnamed,residential
+289,8,14.944638818081684,Strada Provinciale 43 di Orciano,secondary
+289,139,189.4624417852688,Strada Provinciale 43 di Orciano,secondary
+290,69,167.4162302037679,Via Bruno Buozzi,tertiary
+291,164,116.53987800649365,Via delle Biancanelle,residential
+291,333,291.4920724831424,Via Vallidri,residential
+291,292,76.77806411454222,Strada Provinciale 43 di Orciano,secondary
+291,139,228.11960107641625,Strada Provinciale 43 di Orciano,secondary
+292,294,260.3164520081423,Via Selvapiana,residential
+292,61,312.47084506405275,Strada Provinciale 43 di Orciano,secondary
+292,291,76.77806411454222,Strada Provinciale 43 di Orciano,secondary
+293,164,101.06876079507566,Via delle Biancanelle,residential
+294,61,365.2232818162451,Unnamed,unclassified
+294,60,362.77058408012357,Unnamed,unclassified
+294,292,260.3164520081423,Via Selvapiana,residential
+295,186,95.29886150043595,Unnamed,secondary
+295,13,44.142671425730335,Unnamed,secondary
+295,296,108.73551088932433,Unnamed,residential
+296,295,108.73551088932433,Unnamed,residential
+297,298,99.68876607838705,Unnamed,residential
+298,297,99.68876607838705,Unnamed,residential
+298,150,117.31884820251886,Via delle Macchie,residential
+298,138,2190.1521308996794,Via delle Macchie,residential
+299,26,114.86760449453843,Via Fondo la Grotta,secondary
+299,303,27.753320533404427,Via Guglielmo Marconi,secondary
+299,300,176.7246075906359,Unnamed,residential
+300,299,176.7246075906359,Unnamed,residential
+301,302,65.2517537092492,Unnamed,residential
+301,303,43.08176692216185,Via Guglielmo Marconi,secondary
+301,305,79.32350076684313,Via Guglielmo Marconi,secondary
+302,301,65.2517537092492,Unnamed,residential
+303,304,57.04187795508026,Unnamed,residential
+303,299,27.753320533404427,Via Guglielmo Marconi,secondary
+303,301,43.08176692216185,Via Guglielmo Marconi,secondary
+304,303,57.04187795508026,Unnamed,residential
+305,150,46.24608554703549,Via Guglielmo Marconi,secondary
+305,301,79.32350076684313,Via Guglielmo Marconi,secondary
+305,306,83.29399409725517,Unnamed,residential
+306,305,83.29399409725517,Unnamed,residential
+307,132,10.570964348236673,Via del Camposanto,tertiary
+307,350,161.56602402399696,Via Santa Lucia,residential
+308,142,644.7861236516533,Via di Conella,residential
+309,310,464.27292978145294,Unnamed,residential
+309,128,568.0727084879783,Via Valleregli,tertiary
+309,221,1344.5925270842429,Via Valleregli,tertiary
+310,309,464.2729297814529,Unnamed,residential
+311,124,45.565730612597406,Unnamed,residential
+312,354,568.9233367297967,Via Fondo la Grotta,residential
+312,28,270.48024375843886,Via Fondo la Grotta,secondary
+312,27,220.13155413017648,Via Fondo la Grotta,secondary
+313,316,16.20724697395532,Viale Lame,tertiary
+313,315,34.8746028583937,Via Aldo Moro,tertiary
+314,47,10.239242199549391,Via Aldo Moro,tertiary
+314,313,27.871958656318505,Via Aldo Moro,tertiary
+315,314,12.817126222344053,Via Aldo Moro,tertiary
+316,313,16.20724697395532,Viale Lame,tertiary
+316,39,76.72057923009193,Viale Lame,tertiary
+317,42,208.5661502009501,Via Pietro Nenni,residential
+317,316,40.803230963627556,Via Pietro Nenni,residential
+318,320,20.762642042070887,Strada Provinciale 21 del Piano della Tora,secondary
+318,322,19.73748010356086,Unnamed,primary
+320,322,20.825140444560702,Strada Provinciale 21 del Piano della Tora,secondary
+320,28,1680.2311610798324,Strada Provinciale 21 del Piano della Tora,secondary
+321,318,23.900124213812663,Unnamed,primary
+322,319,2.0879068397808496,Unnamed,primary
+323,34,43.912881824077594,Strada Provinciale 12 delle Colline per Livorno,secondary
+323,152,196.08412025309627,Via Palmiro Togliatti,residential
+323,154,1452.0571707116799,Strada Provinciale 12 delle Colline per Livorno,secondary
+324,35,310.3799405536365,Via Volpaia,unclassified
+325,140,537.018985406728,Unnamed,residential
+326,349,82.84295524970962,Unnamed,residential
+327,242,56.45491251311219,Unnamed,unclassified
+328,90,743.0920242845428,Unnamed,residential
+329,89,63.04287362930749,Via i Gioielli,tertiary
+329,4,2689.9859692437744,Via Stradiola,tertiary
+329,330,116.47566050609285,Unnamed,residential
+330,329,116.47566050609288,Unnamed,residential
+331,255,294.8299757814154,Unnamed,unclassified
+332,333,1672.1676386982228,Via di Saletto,residential
+333,332,1672.167638698223,Via di Saletto,residential
+333,261,1314.5207937894247,Strada vicinale dei Pianacci,residential
+333,291,291.4920724831425,Via Vallidri,residential
+334,155,1120.2713287596946,Via la Tana,unclassified
+335,64,25.419762746719282,Unnamed,tertiary
+336,13,19.8720549835826,Unnamed,secondary
+336,175,20.236788945961926,Unnamed,secondary
+336,335,17.838180068564487,Unnamed,tertiary
+337,339,43.08441693866638,Unnamed,residential
+337,340,136.87561097836905,Via Valtriano,residential
+337,367,383.8833169668144,Via Valtriano,residential
+338,339,19.94439695278081,Unnamed,residential
+339,338,19.94439695278081,Unnamed,residential
+339,337,43.08441693866638,Unnamed,residential
+339,99,162.75171742715202,Unnamed,residential
+340,341,74.01156217638479,Unnamed,residential
+340,380,28.3122508499563,Via Valtriano,residential
+340,337,136.87561097836905,Via Valtriano,residential
+341,340,74.01156217638479,Unnamed,residential
+342,236,47.65073442137371,Via Fratelli Gioli,residential
+342,235,57.57230701629287,Via Fratelli Gioli,residential
+342,343,82.44123202822755,Unnamed,residential
+343,342,82.44123202822755,Unnamed,residential
+344,345,110.49235427398094,Unnamed,residential
+344,21,233.4755202322443,Via La Leccia,secondary
+344,381,374.0197809823588,Via La Leccia,secondary
+345,344,110.49235427398094,Unnamed,residential
+346,273,44.42622203054547,Via La Leccia,secondary
+346,21,595.5260580882219,Via La Leccia,secondary
+347,269,7.147146322239507,Unnamed,secondary
+348,262,76.09592635200435,Unnamed,secondary
+348,263,75.34200277011401,Unnamed,trunk_link
+349,57,47.16020370251296,Strada Provinciale 12 delle Colline per Livorno,secondary
+349,208,139.44352743678598,Strada Provinciale 12 delle Colline per Livorno,secondary
+349,326,82.84295524970962,Unnamed,residential
+350,307,161.56602402399693,Via Santa Lucia,residential
+350,358,101.23041767908407,Via Casetta,tertiary
+350,135,1536.8772289318263,Via Casetta,tertiary
+351,133,311.73064023611096,Via Comunale,tertiary
+352,357,48.60815801674022,Via del Micio,residential
+352,359,40.60392674799199,Via Comunale,tertiary
+353,357,7.455699583409619,Via del Micio,residential
+354,312,568.9233367297967,Via Fondo la Grotta,residential
+355,307,20.64993261757936,Via del Camposanto,tertiary
+356,357,8.726566510949523,Via del Micio,residential
+357,356,8.726566510949523,Via del Micio,residential
+357,353,7.455699583409619,Via del Micio,residential
+357,352,48.60815801674022,Via del Micio,residential
+358,350,101.23041767908408,Via Casetta,tertiary
+358,355,9.053200285370544,Via del Camposanto,tertiary
+359,351,1.3184794904491202,Via Comunale,tertiary
+359,259,70.43979546974431,Via Roma,tertiary
+360,355,10.469644285697425,Via Roma,tertiary
+360,358,9.072303155148035,Via Roma,tertiary
+361,192,89.06243977507323,Via dei Poggetti,residential
+362,59,482.684098681905,Via dei Poggetti,unclassified
+362,193,138.75467413807257,Via dei Poggetti,unclassified
+362,193,213.02751944828194,Via dei Poggetti,residential
+363,38,187.47354008901493,Via Guido Rossa,residential
+364,95,28.428685189575024,Piazza Torello Pierazzi,residential
+364,239,65.79479697364326,Unnamed,residential
+365,240,34.476943238680285,Via Pugnano,tertiary
+365,95,43.32220051624171,Via Pugnano,tertiary
+365,366,27.39526550902628,Piazza Torello Pierazzi,residential
+366,364,43.302772915453,Unnamed,residential
+366,365,27.39526550902628,Piazza Torello Pierazzi,residential
+367,337,383.88331696681433,Via Valtriano,residential
+368,83,25.374858134455714,Via Augusto Bellini Pietri,unclassified
+368,75,3262.1073993247605,Via Pontita,unclassified
+368,369,869.3354591050124,Via del Villaggio,unclassified
+369,368,869.3354591050123,Via del Villaggio,unclassified
+370,3,178.0999761734041,Via Lavoria,secondary
+370,376,32.555160434022426,Via Lavoria,secondary
+371,376,16.672618854737205,Via Lavoria,secondary
+371,370,33.503835205854024,Via Lavoria,secondary
+372,371,6.0048552366930155,Via Lavoria,secondary
+373,372,20.141272361278027,Via Lavoria,secondary
+373,382,51.93480967797974,Via Galileo Galilei,unclassified
+374,373,3.912904915105185,Via Lavoria,secondary
+374,238,34.91746176085854,Via Lavoria,secondary
+375,374,16.47532509373559,Via Lavoria,secondary
+375,238,32.51054920309817,Via Lavoria,secondary
+376,377,18.6859352647157,Via Lavoria,secondary
+377,327,66.46838235025888,Unnamed,unclassified
+377,375,18.988363331267728,Via Lavoria,secondary
+378,378,165.0221506501049,Via Filippo Mazzei,residential
+378,378,165.0221506501049,Via Filippo Mazzei,residential
+378,232,129.03774411005134,Via Filippo Mazzei,residential
+379,98,15.989305634357695,Via La Leccia,secondary
+379,99,204.95557729723689,Via La Leccia,secondary
+380,340,28.3122508499563,Via Valtriano,residential
+380,379,15.27354621511519,Via Valtriano,residential
+381,98,3.9257253577007774,Via La Leccia,secondary
+381,97,49.72673441660082,Via Pugnano,tertiary
+381,344,374.01978098235884,Via La Leccia,secondary
+382,237,539.4503241178021,Via Galileo Galilei,unclassified
+382,372,54.05196862038094,Via Galileo Galilei,unclassified
+383,119,173.5837688371584,Unnamed,unclassified
+383,62,37.262930620499574,Unnamed,unclassified
+383,384,130.24693113352635,Unnamed,unclassified
+384,171,312.4248345921466,Via Nuova Pisana Livornese,tertiary
+384,125,242.90803801462053,Via Nuova Pisana Livornese,tertiary
