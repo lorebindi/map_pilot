@@ -3,12 +3,12 @@
 
 #include <optional>
 
-#include "../search_state.hpp"
-#include "../bounding_box.hpp"
-#include "../parent_candidates.hpp"
-#include "../rtree_node.hpp"
-#include "../tree_path.hpp"
-#include "../reinsert_entries.hpp"
+#include "../common/search_state.hpp"
+#include "../common/bounding_box.hpp"
+#include "../common/parent_candidates.hpp"
+#include "rtree_node.hpp"
+#include "../common/tree_path.hpp"
+#include "../common/reinsert_entries.hpp"
 
 struct Edge;
 

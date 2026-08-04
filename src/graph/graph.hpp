@@ -27,7 +27,7 @@
 #include <stdexcept>
 
 #include "highways.hpp"
-#include "../data_structures/rtrees/bounding_box.hpp"
+#include "../data_structures/rtrees/common/bounding_box.hpp"
 
 
 /*

@@ -1,5 +1,5 @@
 #include <cassert>
-#include "../rtree_node.hpp"
+#include "rtree_node.hpp"
 /*
  * Shifts entries left starting from 'start_index', compacting the array
  * after an entry has been removed. Works for both leaf and internal nodes.

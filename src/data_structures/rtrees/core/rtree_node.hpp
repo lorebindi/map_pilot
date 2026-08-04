@@ -8,8 +8,8 @@
 #include <memory>
 #include <variant>
 #include "../rtree_config.hpp"
-#include "../bounding_box.hpp"
-#include "../edge_ptr.hpp"
+#include "../common/bounding_box.hpp"
+#include "../common/edge_ptr.hpp"
 
 /*
  * A single node in the R-tree.

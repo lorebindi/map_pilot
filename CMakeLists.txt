@@ -12,15 +12,19 @@ add_executable(MapPilot
         src/graph/highways.cpp
         src/utils/utm_converter.cpp
         src/data_structures/min_heap/min_heap.cpp
-        src/data_structures/rtrees/bounding_box.hpp
-        src/data_structures/rtrees/edge_ptr.hpp
-        src/data_structures/rtrees/reinsert_entries.hpp
+        src/data_structures/rtrees/common/bounding_box.hpp
+        src/data_structures/rtrees/common/edge_ptr.hpp
+        src/data_structures/rtrees/common/reinsert_entries.hpp
         src/data_structures/rtrees/rtree_config.hpp
-        src/data_structures/rtrees/rtree_node.hpp
-        src/data_structures/rtrees/search_state.hpp
-        src/data_structures/rtrees/rtree_base.hpp
-        src/data_structures/rtrees/rtree_base.cpp
-        src/data_structures/rtrees/tree_path.hpp
+        src/data_structures/rtrees/core/rtree_node.hpp
+        src/data_structures/rtrees/core/rtree_node.cpp
+        src/data_structures/rtrees/common/search_state.hpp
+        src/data_structures/rtrees/core/rtree_base.hpp
+        src/data_structures/rtrees/core/rtree_base.cpp
+        src/data_structures/rtrees/common/tree_path.hpp
+        src/data_structures/rtrees/common/parent_candidates.hpp
+        src/data_structures/rtrees/rtree/rtree.hpp
+        src/data_structures/rtrees/rtree/rtree.cpp
 )
 
 target_include_directories(MapPilot PRIVATE src)

@@ -1,7 +1,7 @@
-#include "../rtree_base.hpp"
+#include "rtree_base.hpp"
 
-#include "../parent_candidates.hpp"
-#include "../reinsert_entries.hpp"
+#include "../common/parent_candidates.hpp"
+#include "../common/reinsert_entries.hpp"
 #include "graph/graph.hpp"
 #include "utils/utm_converter.hpp"
 
