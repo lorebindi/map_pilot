@@ -1,6 +1,5 @@
 #include <cassert>
-#include "rtree_node.hpp"
-
+#include "../rtree_node.hpp"
 /*
  * Shifts entries left starting from 'start_index', compacting the array
  * after an entry has been removed. Works for both leaf and internal nodes.
@@ -25,5 +24,13 @@ void RTreeNode::shift_entries_left(uint8_t start_index) {
     }
 
     n_entries--;
+}
+
+void RTreeNode::update_child_bounding_rect (uint8_t child_index) {
+    assert(child_index < this->n_entries);
+    assert(is_leaf());
+
+    auto& children = std::get<RTreeNode::InternalEntries>(this->entries);
+    this->bounding_rects[child_index] = get_node_mbr(*children[child_index], children[child_index]->n_entries);
 }
 

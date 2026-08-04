@@ -16,7 +16,7 @@
 #include <vector>
 #include <limits>
 
-#include "rtree_config.hpp"
+#include "../rtree_config.hpp"
 
 class RTreeNode; // fwd decl, avoids circular dependency with rtree_node.hpp
 

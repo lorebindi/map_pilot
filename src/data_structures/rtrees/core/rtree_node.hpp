@@ -4,11 +4,12 @@
 #pragma once
 
 #include <array>
+#include <cassert>
 #include <memory>
 #include <variant>
-#include "rtree_config.hpp"
-#include "bounding_box.hpp"
-#include "edge_ptr.hpp"
+#include "../rtree_config.hpp"
+#include "../bounding_box.hpp"
+#include "../edge_ptr.hpp"
 
 /*
  * A single node in the R-tree.
@@ -49,6 +50,19 @@ public:
     * after an entry has been removed. Works for both leaf and internal nodes.
     */
     void shift_entries_left(uint8_t start_index);
+
+    /*
+    * Updates the bounding rectangle of the child node after insertion into one of its
+    * children (i.e. the one identified by 'child index').
+    *
+    * Parameters:
+    * - 'child_index': the index of the child in 'node->children'.
+    *
+    * Use case:
+    *  This function is called when the minimum bounding rectangle of the just added/modified
+    *  child need to be (re)calculated.
+    */
+    void update_child_bounding_rect (uint8_t child_index);
 
 private:
     bool is_leaf_;
