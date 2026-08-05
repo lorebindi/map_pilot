@@ -6,7 +6,7 @@
 #include "utils/utm_converter.hpp"
 
 BoundingBox RTreeBase::root_mbr() const {
-    get_node_mbr(*root_, rtree_config::MAX_ENTRIES);
+    return get_node_mbr(*root_, rtree_config::MAX_ENTRIES);
 }
 
 
@@ -149,6 +149,22 @@ void RTreeBase::get_overlapping_parent(const RTreeNode* node, const TreeEntry& r
 
 }
 
+void RTreeBase::create_new_root(InsertResult&& result) {
+    assert(result.split);
+
+    auto new_root = std::make_unique<RTreeNode>(false);
+
+    new_root->insert_entry(
+        get_node_mbr(*result.group1, result.group1->n_entries),
+        std::move(result.group1));
+
+    new_root->insert_entry(
+        get_node_mbr(*result.group2, result.group2->n_entries),
+        std::move(result.group2));
+
+    root_ = std::move(new_root);
+}
+
 /*
  * Reinsert all the entry (data entry or internal node entry) inside 'to_reinsert' in the
  * rtree starting from 'root'.
@@ -172,7 +188,9 @@ void RTreeBase::reinsert_nodes(ReinsertEntries& to_reinsert) {
         if (entry.is_data_entry()) {
             // orphaned leaf edge: take ownership from to_reinsert, insert starting from root
             auto edge = std::move(std::get<std::unique_ptr<EdgePtr>>(entry.data));
-            this->insert_edge(*edge->src, *edge->dst, std::move(edge));
+            InsertResult result = insert_edge_internal(root_.get(), entry.b_box, std::move(edge));
+            if (result.split)
+                create_new_root(std::move(result));
 
         }else {
             // orphaned internal node: find candidate parents still live in the
@@ -183,7 +201,10 @@ void RTreeBase::reinsert_nodes(ReinsertEntries& to_reinsert) {
             uint8_t best_parent_index = get_area_min_enlargement_index(parents, parents.size(), to_reinsert[i].b_box);
             RTreeNode* best_parent = parents[best_parent_index];
 
-            this->root_ = insert_internal_node(this->root_.get(), best_parent, entry, 0);
+            InsertResult result = insert_internal_node(this->root_.get(), best_parent, entry, 0);
+
+            if (result.split)
+                create_new_root(std::move(result));
         }
     }
 }

@@ -1,5 +1,8 @@
-\build
-\cmake-build-debug
-\CMakeFiles
+build/
+cmake-build-debug/
+CMakeFiles/
+Testing/
+.idea/
+.cmake/api/v1/
 CMakeCache.txt
 cmake_install.cmake

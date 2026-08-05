@@ -13,6 +13,28 @@
 struct Edge;
 
 /*
+ * Result returned by the recursive insertion procedure.
+ *
+ * During an insertion, a subtree can either absorb the new entry without
+ * changing its structure, or it can overflow and require a split.
+ *
+ * - split == false:
+ *   The insertion was completed inside the current subtree. No replacement
+ *   node needs to be propagated to the parent.
+ *
+ * - split == true:
+ *   The current subtree was split and a new node (typically a new parent
+ *   containing the resulting groups) must replace the previous subtree in
+ *   the parent. Ownership of that new node is transferred through the
+ *   unique_ptr.
+ */
+struct InsertResult {
+    bool split;
+    std::unique_ptr<RTreeNode> group1;
+    std::unique_ptr<RTreeNode> group2;
+};
+
+/*
  * Abstract base shared by RTree and RStarTree. Owns the root node and
  * implements every operation the two variants share (search, remove, MBR
  * queries). Only insert_edge differs between them -- that's the sole pure
@@ -36,7 +58,7 @@ public:
     BoundingBox root_mbr() const;
 
     // The one behavior that differs between R-tree and R*-tree.
-    virtual void insert_edge(const Node& src, const Node& dst, std::unique_ptr<EdgePtr> edge) = 0;
+    virtual void insert_edge(const Node& src, const Node& dst, const Edge& edge) = 0;
 
     /*
     * This method checks parameters and call remove_edge_internal
@@ -60,10 +82,10 @@ public:
 protected:
     std::unique_ptr<RTreeNode> root_;
 
-    virtual void insert_edge_internal(RTreeNode* node, BoundingBox rect, EdgePtr *e, bool is_root) = 0;
+    virtual InsertResult insert_edge_internal(RTreeNode* node, BoundingBox rect, std::unique_ptr<EdgePtr> e) = 0;
 
-    virtual std::unique_ptr<RTreeNode> insert_internal_node(RTreeNode* node, const RTreeNode* best_parent,
-                                           const TreeEntry& reinsert, uint16_t curr_level) = 0;
+    virtual InsertResult insert_internal_node(RTreeNode* node, const RTreeNode* best_parent,
+                                           TreeEntry& reinsert, uint16_t curr_level) = 0;
 
     /*
     * Visit recursively the rtree and store all possible overlapping parent of 'reinsert'
@@ -76,6 +98,8 @@ protected:
     *  - 'result': container (tree_entries_arr_t) where overlapping parent candidates are collected.
     */
     void get_overlapping_parent(const RTreeNode* node, const TreeEntry& reinsert, uint16_t curr_level, ParentCandidates& result);
+
+    void create_new_root(InsertResult&& result);
 
 private:
 

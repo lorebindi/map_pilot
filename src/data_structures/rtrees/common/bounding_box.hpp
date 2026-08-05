@@ -78,10 +78,8 @@ struct BoundingBox {
     float enlargement_needed(const BoundingBox& other) const noexcept {
         BoundingBox unionBox = union_bounding_box(other);
 
-        return (unionBox.x_max - unionBox.x_min) *
-               (unionBox.y_max - unionBox.y_min) -
-               (x_max - x_min) *
-               (y_max - y_min);
+        return (unionBox.x_max - unionBox.x_min) * (unionBox.y_max - unionBox.y_min)
+               - (x_max - x_min) * (y_max - y_min);
     }
 
     // returns the area of the current bb

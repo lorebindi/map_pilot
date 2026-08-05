@@ -11,6 +11,14 @@
 #include "../common/bounding_box.hpp"
 #include "../common/edge_ptr.hpp"
 
+class RTreeNode;
+
+// Represents the new entry to insert during the split operation: either a EdgePtr or a RTreeNode.
+using SplitEntry = std::variant<
+    std::unique_ptr<EdgePtr>,
+    std::unique_ptr<RTreeNode>
+>;
+
 /*
  * A single node in the R-tree.
  *
@@ -42,6 +50,20 @@ public:
 
     uint8_t n_entries = 0; /* only 8 bit because the number of entries are small. */
 
+    /*
+    * Inserts a new entry into this node.
+    *
+    * This function assumes that the node has available space. It does not
+    * perform overflow handling or splitting; the caller is responsible for
+    * checking n_entries before calling it.
+    *
+    * For leaf nodes, the inserted entry must be an EdgePtr.
+    * For internal nodes, the inserted entry must be an RTreeNode.
+    */
+    void insert_entry(BoundingBox rect, std::unique_ptr<EdgePtr> edge);
+    void insert_entry(BoundingBox rect, std::unique_ptr<RTreeNode> child);
+    void insert_entry(const BoundingBox& bb, SplitEntry entry);
+
     // It returns the bounding box of the i-th element
     BoundingBox bounding_box_at(uint8_t i) const { return bounding_rects[i]; }
 
@@ -63,6 +85,8 @@ public:
     *  child need to be (re)calculated.
     */
     void update_child_bounding_rect (uint8_t child_index);
+
+    void adopt_split_children(uint8_t index, std::unique_ptr<RTreeNode> child1, std::unique_ptr<RTreeNode> child2);
 
 private:
     bool is_leaf_;

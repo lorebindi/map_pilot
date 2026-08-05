@@ -14,13 +14,23 @@ public:
     RTree(RTree&&) noexcept = default;
     RTree& operator=(RTree&&) noexcept = default;
 
-    void insert_edge(const Node& src, const Node& dst, std::unique_ptr<EdgePtr> edge) override;
+    /*
+    * This function check the parameters and call insert_edge_internal.
+    *
+    * Note: due to the splitting process, root can change.
+    *
+    * Parameters:
+    *  - 'src': reference to the source node of the edge to insert.
+    *  - 'dst': reference to the destination node of the edge to insert.
+    *  - 'edge': reference to the edge to insert.
+    */
+    void insert_edge(const Node& src, const Node& dst, const Edge& edge) override;
 
 protected:
 
-    void insert_edge_internal(RTreeNode* node, BoundingBox rect, EdgePtr* edge, bool is_root) override;
+    InsertResult insert_edge_internal(RTreeNode* node, BoundingBox rect, std::unique_ptr<EdgePtr> e) override;
 
-    std::unique_ptr<RTreeNode> insert_internal_node(RTreeNode* node, const RTreeNode* best_parent, const TreeEntry& reinsert, uint16_t curr_level) override;
+    InsertResult insert_internal_node(RTreeNode* node, const RTreeNode* best_parent, TreeEntry& reinsert, uint16_t curr_level) override;
 };
 
 #endif RTREE_HPP
