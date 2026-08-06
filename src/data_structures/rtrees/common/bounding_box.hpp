@@ -99,7 +99,7 @@ struct BoundingBox {
         return BoundingBox{cx, cy, cx, cy};
     }
 
-    bool bbs_equals(const BoundingBox& other) const noexcept {
+    bool equals(const BoundingBox& other) const noexcept {
         return x_min == other.x_min && x_max == other.x_max &&
                y_min == other.y_min && y_max == other.y_max;
     }

@@ -2,7 +2,7 @@
 #define REINSERT_ENTRIES_HPP
 
 #include <cstdint>
-#include <vector>
+#include <deque>
 #include <variant>
 #include <memory>
 #include "bounding_box.hpp"
@@ -41,7 +41,7 @@ struct TreeEntry {
 */
 class ReinsertEntries {
 public:
-    ReinsertEntries() { entries_.reserve(reinsert_entries_config::INITIAL_CAPACITY); }
+    ReinsertEntries() {  }
 
     // This function add an element to the reinsert entries vector
     void add(BoundingBox bb, uint16_t tree_node_level, unique_ptr<RTreeNode> node) {
@@ -49,6 +49,9 @@ public:
     }
     void add(BoundingBox bb, uint16_t tree_node_level, unique_ptr<EdgePtr> edge) {
         entries_.push_back(TreeEntry{bb, tree_node_level, std::move(edge)});
+    }
+    void add(TreeEntry entry) {
+        entries_.push_back(std::move(entry));
     }
 
     // Merge the 'src' with current reinsert entries.
@@ -66,6 +69,8 @@ public:
     uint16_t size() const noexcept { return static_cast<uint16_t>(entries_.size()); }
     // It return true if the reinsert entries is empty
     bool empty() const noexcept { return entries_.empty(); }
+    // Removes all the elements keeping the allocated size
+    void clear() noexcept { entries_.clear(); }
 
     TreeEntry& operator[](uint16_t i) { return entries_[i]; }
     const TreeEntry& operator[](uint16_t i) const { return entries_[i]; }
@@ -77,7 +82,9 @@ public:
     auto end() const { return entries_.end(); }
 
 private:
-    std::vector<TreeEntry> entries_;
+
+    // std::deque because are needed pointers/references to existing elements across insertion operation
+    std::deque<TreeEntry> entries_;
 };
 
 

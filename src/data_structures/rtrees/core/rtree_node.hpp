@@ -68,10 +68,45 @@ public:
     BoundingBox bounding_box_at(uint8_t i) const { return bounding_rects[i]; }
 
     /*
-    * Shifts entries left starting from 'start_index', compacting the array
-    * after an entry has been removed. Works for both leaf and internal nodes.
+    * Shifts all entries one position to the left starting from 'start_index',
+    * compacting the node after an entry has been removed.
+    *
+    * Precondition:
+    * - The node entries are already stored contiguously in the range [0, n_entries).
+    * - Exactly one "hole" exists at position 'start_index', typically because
+    *   the entry at that position has just been moved out.
+    *
+    * This function fills that hole by shifting all subsequent entries one
+    * position to the left. It is not intended for compacting nodes containing
+    * multiple holes.
+    *
+    * Works for both leaf and internal nodes. Complexity: O(n-start_index).
     */
     void shift_entries_left(uint8_t start_index);
+
+    /*
+    * Compacts the node by removing any holes left by previously removed entries.
+    *
+    * This function scans the occupied portion of the node and moves all valid
+    * entries towards the beginning of the arrays, preserving their relative
+    * order. The corresponding bounding rectangles are moved together with their
+    * entries.
+    *
+    * A "hole" is represented by a nullptr in the entries array. After compaction,
+    * all valid entries occupy the contiguous range [0, n_entries), and n_entries
+    * is updated to reflect the new number of entries.
+    *
+    * Works for both leaf and internal nodes.
+    */
+    void compact_entries();
+
+    /*
+    * They remove an entry from the RTreeNode and return it.
+    *
+    * Note: They don't shit entries left, it's a caller's responsibility
+    */
+    std::unique_ptr<EdgePtr> extract_leaf_entry(uint8_t index);
+    std::unique_ptr<RTreeNode> extract_internal_entry(uint8_t index);
 
     /*
     * Updates the bounding rectangle of the child node after insertion into one of its

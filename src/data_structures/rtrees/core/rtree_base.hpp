@@ -82,10 +82,52 @@ public:
 protected:
     std::unique_ptr<RTreeNode> root_;
 
+    /*
+    * Inserts an edge into the appropriate leaf node of the R-tree. If the node overflows,
+    * a quadratic split is performed. Splits may propagate up the tree, possibly requiring a new root.
+    *
+    * Parameters:
+    *  - 'node': pointer to the current node (can be internal or leaf) where insertion is attempted.
+    *  - 'rect': bounding box of the edge to be inserted.
+    *  - 'e': pointer to the EdgePtr structure that wraps the graph edge and its endpoints.
+    *  - 'is_root': boolean flag indicating whether 'node' is the root (important for split handling)
+    */
     virtual InsertResult insert_edge_internal(RTreeNode* node, BoundingBox rect, std::unique_ptr<EdgePtr> e) = 0;
 
-    virtual InsertResult insert_internal_node(RTreeNode* node, const RTreeNode* best_parent,
-                                           TreeEntry& reinsert, uint16_t curr_level) = 0;
+    /*
+    * Reinserts an orphaned internal node into the tree at its designated parent location.
+    *
+    * Traverses the R-tree recursively down to the specified `best_parent` node at the target level. Once reached,
+    * it attempts to insert the orphaned internal node stored in `reinsert`. If `best_parent` has reached its
+    * maximum capacity, the node is split and the resulting structural changes are propagated upwards.
+    *
+    * Parameters:
+    *   - 'node': pointer to the current subtree root being inspected during traversal.
+    *   - 'best_parent': target node where the orphaned internal entry should be inserted.
+    *   - 'reinsert': wrapper holding the orphaned internal node and its bounding box metadata.
+    *   - 'curr_level': current level depth of `node` during recursion (0 = root level).
+    */
+    virtual InsertResult insert_internal_node(RTreeNode* node, const RTreeNode* best_parent, TreeEntry& reinsert, uint16_t curr_level) = 0;
+
+    /*
+    * Reinserts all entries contained in 'to_reinsert' into the tree.
+    *
+    * The entries can represent either data entries (leaf level) or internal node
+    * entries (subtrees). This function restores the tree structure after
+    * restructuring operations by placing the entries back into appropriate
+    * locations while preserving R-tree invariants and bounding-box correctness.
+    *
+    * The concrete insertion policy is delegated to derived classes through the
+    * virtual insertion routines, allowing both R-tree and R*-tree variants to
+    * provide their specific insertion behavior.
+    *
+    * Note:
+    * - The root may change during reinsertion due to node splits.
+    *
+    * Parameters:
+    *  - 'to_reinsert': collection of entries that must be reinserted into the tree.
+    */
+    void reinsert_nodes(ReinsertEntries& to_reinsert);
 
     /*
     * Visit recursively the rtree and store all possible overlapping parent of 'reinsert'
@@ -121,22 +163,6 @@ private:
     *  - 'p': contains the path from the found leaf to the root of the R-tree.
     */
     void condense_tree(TreePath &tree_path);
-    /*
-    * Reinsert all the entry (data entry or internal node entry) inside 'to_reinsert' in the
-    * rtree starting from 'root'.
-    *
-    * This function ensures that all orphaned entries are correctly placed back into
-    * the R-tree while maintaining its structural and bounding-box properties.
-    *
-    * Returns the root.
-    *
-    * Note: due to the splitting process, can return a different pointer to the root
-    *
-    * Parameters:
-    *  - 'root': pointer to the root of the R-tree.
-    *  - 'to_reinsert': pointer to the array of the R-tree node have to be reinsert.
-    */
-    void reinsert_nodes(ReinsertEntries& to_reinsert);
 
     /*
     * This function removes an edge from the rtree.

@@ -152,16 +152,17 @@ InsertResult forward_split(RTreeNode* node, std::unique_ptr<RTreeNode> group1, s
     return {true, std::move(new_group1), std::move(new_group2)};
 }
 
-/* Inserts an edge into the appropriate leaf node of the R-tree.
- * If the node overflows, a quadratic split is performed.
- * Splits may propagate up the tree, possibly requiring a new root.
- *
- * Parameters:
- *  - 'node': pointer to the current node (can be internal or leaf) where insertion is attempted.
- *  - 'rect': bounding box of the edge to be inserted.
- *  - 'e': pointer to the EdgePtr structure that wraps the graph edge and its endpoints.
- *  - 'is_root': boolean flag indicating whether 'node' is the root (important for split handling)
- */
+/*
+* Inserts an edge into the appropriate leaf node of the R-tree.
+* If the node overflows, a quadratic split is performed.
+* Splits may propagate up the tree, possibly requiring a new root.
+*
+* Parameters:
+*  - 'node': pointer to the current node (can be internal or leaf) where insertion is attempted.
+*  - 'rect': bounding box of the edge to be inserted.
+*  - 'e': pointer to the EdgePtr structure that wraps the graph edge and its endpoints.
+*  - 'is_root': boolean flag indicating whether 'node' is the root (important for split handling)
+*/
 InsertResult RTree::insert_edge_internal(RTreeNode *node, BoundingBox rect, std::unique_ptr<EdgePtr> e) {
     if (node->is_leaf()) {
         if (node->n_entries < rtree_config::MAX_ENTRIES) {
@@ -208,11 +209,8 @@ InsertResult RTree::insert_edge_internal(RTreeNode *node, BoundingBox rect, std:
  *  - 'edge': reference to the edge to insert.
  */
 void RTree::insert_edge(const Node& src, const Node& dst, const Edge& edge) {
-    if (edge.y != dst.id) {
-        throw std::invalid_argument(
-            "RTree::insert_edge: destination nodes aren't the same."
-        );
-    }
+    if (edge.y != dst.id)
+        throw std::invalid_argument("RTree::insert_edge: destination nodes aren't the same.");
 
     BoundingBox bb = BoundingBox::from_points(src.lat, src.lon, dst.lat, dst.lon);
     auto e = std::make_unique<EdgePtr>(EdgePtr{&src, &dst, &edge});
@@ -223,6 +221,19 @@ void RTree::insert_edge(const Node& src, const Node& dst, const Edge& edge) {
         create_new_root(std::move(result));
 }
 
+/*
+* Reinserts an orphaned internal node into the tree at its designated parent location.
+*
+* Traverses the R-tree recursively down to the specified `best_parent` node at the target level. Once reached,
+* it attempts to insert the orphaned internal node stored in `reinsert`. If `best_parent` has reached its
+* maximum capacity, the node is split and the resulting structural changes are propagated upwards.
+*
+* Parameters:
+*   - 'node': pointer to the current subtree root being inspected during traversal.
+*   - 'best_parent': target node where the orphaned internal entry should be inserted.
+*   - 'reinsert': wrapper holding the orphaned internal node and its bounding box metadata.
+*   - 'curr_level': current level depth of `node` during recursion (0 = root level).
+*/
 InsertResult RTree::insert_internal_node(RTreeNode* node, const RTreeNode* best_parent, TreeEntry& reinsert, uint16_t curr_level) {
     assert(node != nullptr);
     assert(!reinsert.is_data_entry());
@@ -271,3 +282,5 @@ InsertResult RTree::insert_internal_node(RTreeNode* node, const RTreeNode* best_
     assert(false && "insert_internal_node: best_parent not found");
     std::abort();
 }
+
+

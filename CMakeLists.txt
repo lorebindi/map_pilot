@@ -25,6 +25,8 @@ add_executable(MapPilot
         src/data_structures/rtrees/common/parent_candidates.hpp
         src/data_structures/rtrees/rtree/rtree.hpp
         src/data_structures/rtrees/rtree/rtree.cpp
+        src/data_structures/rtrees/r_star_tree/r_star_tree.hpp
+        src/data_structures/rtrees/r_star_tree/r_star_tree.cpp
 )
 
 target_include_directories(MapPilot PRIVATE src)

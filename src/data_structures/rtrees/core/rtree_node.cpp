@@ -43,8 +43,20 @@ void RTreeNode::insert_entry(const BoundingBox& bb, SplitEntry entry) {
 
 
 /*
- * Shifts entries left starting from 'start_index', compacting the array
- * after an entry has been removed. Works for both leaf and internal nodes.
+ * Shifts all entries one position to the left starting from 'start_index',
+ * compacting the node after an entry has been removed.
+ *
+ * Precondition:
+ * - The node entries are already stored contiguously in the range
+ *   [0, n_entries).
+ * - Exactly one "hole" exists at position 'start_index', typically because
+ *   the entry at that position has just been moved out.
+ *
+ * This function fills that hole by shifting all subsequent entries one
+ * position to the left. It is not intended for compacting nodes containing
+ * multiple holes.
+ *
+ * Works for both leaf and internal nodes.
  */
 void RTreeNode::shift_entries_left(uint8_t start_index) {
     assert(start_index < n_entries);
@@ -66,6 +78,81 @@ void RTreeNode::shift_entries_left(uint8_t start_index) {
     }
 
     n_entries--;
+}
+
+/*
+* Compacts the node by removing any holes left by previously removed entries.
+*
+* This function scans the occupied portion of the node and moves all valid
+* entries towards the beginning of the arrays, preserving their relative
+* order. The corresponding bounding rectangles are moved together with their
+* entries.
+*
+* A "hole" is represented by a nullptr in the entries array. After compaction,
+* all valid entries occupy the contiguous range [0, n_entries), and n_entries
+* is updated to reflect the new number of entries.
+*
+* Works for both leaf and internal nodes.
+*/
+void RTreeNode::compact_entries() {
+    uint8_t write = 0; // indicates the where to write the next valid entries.
+
+    if (this->is_leaf()) {
+        auto& data = std::get<LeafEntries>(this->entries);
+
+        for (uint8_t read = 0; read < this->n_entries; read++) {
+            if (data[read] != nullptr) {
+                if (write != read) {
+                    data[write] = std::move(data[read]);
+                    this->bounding_rects[write] = this->bounding_rects[read];
+                }
+                write++;
+            }
+        }
+        this->n_entries = write;
+    }else {
+        auto& children = std::get<InternalEntries>(this->entries);
+
+        for (uint8_t read = 0; read < this->n_entries; read++) {
+            if (children[read] != nullptr) {
+                if (write != read) {
+                    children[write] = std::move(children[read]);
+                    this->bounding_rects[write] = this->bounding_rects[read];
+                }
+                write++;
+            }
+        }
+        this->n_entries = write;
+    }
+}
+
+/*
+* They remove an entry from the RTreeNode and return it.
+*
+* Note: They don't shit entries left, it's a caller's responsibility
+*/
+std::unique_ptr<EdgePtr> RTreeNode::extract_leaf_entry(uint8_t index) {
+    assert(this->is_leaf());
+    assert(index < n_entries);
+
+    auto& internal_entries = std::get<LeafEntries>(entries);
+
+    auto removed = std::move(internal_entries[index]);
+    --n_entries;
+
+    return removed;
+}
+std::unique_ptr<RTreeNode> RTreeNode::extract_internal_entry(uint8_t index) {
+    assert(!this->is_leaf());
+
+    assert(index < n_entries);
+
+    auto& internal_entries = std::get<InternalEntries>(entries);
+
+    auto removed = std::move(internal_entries[index]);
+    --n_entries;
+
+    return removed;
 }
 
 /*

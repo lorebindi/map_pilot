@@ -166,20 +166,23 @@ void RTreeBase::create_new_root(InsertResult&& result) {
 }
 
 /*
- * Reinsert all the entry (data entry or internal node entry) inside 'to_reinsert' in the
- * rtree starting from 'root'.
- *
- * This function ensures that all orphaned entries are correctly placed back into
- * the R-tree while maintaining its structural and bounding-box properties.
- *
- * Returns the root.
- *
- * Note: due to the splitting process, can return a different pointer to the root
- *
- * Parameters:
- *  - 'root': pointer to the root of the R-tree.
- *  - 'to_reinsert': pointer to the array of the R-tree node have to be reinsert.
- */
+* Reinserts all entries contained in 'to_reinsert' into the tree.
+*
+* The entries can represent either data entries (leaf level) or internal node
+* entries (subtrees). This function restores the tree structure after
+* restructuring operations by placing the entries back into appropriate
+* locations while preserving R-tree invariants and bounding-box correctness.
+*
+* The concrete insertion policy is delegated to derived classes through the
+* virtual insertion routines, allowing both R-tree and R*-tree variants to
+* provide their specific insertion behavior.
+*
+* Note:
+* - The root may change during reinsertion due to node splits.
+*
+* Parameters:
+*  - 'to_reinsert': collection of entries that must be reinserted into the tree.
+*/
 void RTreeBase::reinsert_nodes(ReinsertEntries& to_reinsert) {
 
     for (uint16_t i = 0; i < to_reinsert.size(); i++) {

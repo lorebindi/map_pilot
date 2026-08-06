@@ -201,6 +201,30 @@ src/data_structures/rtrees/core/rtree_node.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/MapPilot.dir/build.make CMakeFiles/MapPilot.dir/src/data_structures/rtrees/core/rtree_node.cpp.s
 .PHONY : src/data_structures/rtrees/core/rtree_node.cpp.s
 
+src/data_structures/rtrees/r_star_tree/r_star_tree.o: src/data_structures/rtrees/r_star_tree/r_star_tree.cpp.o
+.PHONY : src/data_structures/rtrees/r_star_tree/r_star_tree.o
+
+# target to build an object file
+src/data_structures/rtrees/r_star_tree/r_star_tree.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MapPilot.dir/build.make CMakeFiles/MapPilot.dir/src/data_structures/rtrees/r_star_tree/r_star_tree.cpp.o
+.PHONY : src/data_structures/rtrees/r_star_tree/r_star_tree.cpp.o
+
+src/data_structures/rtrees/r_star_tree/r_star_tree.i: src/data_structures/rtrees/r_star_tree/r_star_tree.cpp.i
+.PHONY : src/data_structures/rtrees/r_star_tree/r_star_tree.i
+
+# target to preprocess a source file
+src/data_structures/rtrees/r_star_tree/r_star_tree.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MapPilot.dir/build.make CMakeFiles/MapPilot.dir/src/data_structures/rtrees/r_star_tree/r_star_tree.cpp.i
+.PHONY : src/data_structures/rtrees/r_star_tree/r_star_tree.cpp.i
+
+src/data_structures/rtrees/r_star_tree/r_star_tree.s: src/data_structures/rtrees/r_star_tree/r_star_tree.cpp.s
+.PHONY : src/data_structures/rtrees/r_star_tree/r_star_tree.s
+
+# target to generate assembly for a file
+src/data_structures/rtrees/r_star_tree/r_star_tree.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MapPilot.dir/build.make CMakeFiles/MapPilot.dir/src/data_structures/rtrees/r_star_tree/r_star_tree.cpp.s
+.PHONY : src/data_structures/rtrees/r_star_tree/r_star_tree.cpp.s
+
 src/data_structures/rtrees/rtree/rtree.o: src/data_structures/rtrees/rtree/rtree.cpp.o
 .PHONY : src/data_structures/rtrees/rtree/rtree.o
 
@@ -363,6 +387,9 @@ help:
 	@echo "... src/data_structures/rtrees/core/rtree_node.o"
 	@echo "... src/data_structures/rtrees/core/rtree_node.i"
 	@echo "... src/data_structures/rtrees/core/rtree_node.s"
+	@echo "... src/data_structures/rtrees/r_star_tree/r_star_tree.o"
+	@echo "... src/data_structures/rtrees/r_star_tree/r_star_tree.i"
+	@echo "... src/data_structures/rtrees/r_star_tree/r_star_tree.s"
 	@echo "... src/data_structures/rtrees/rtree/rtree.o"
 	@echo "... src/data_structures/rtrees/rtree/rtree.i"
 	@echo "... src/data_structures/rtrees/rtree/rtree.s"

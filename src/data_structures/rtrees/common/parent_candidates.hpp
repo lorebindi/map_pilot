@@ -18,6 +18,7 @@ class RTreeNode;
 class ParentCandidates {
 public:
     void add(BoundingBox bb, RTreeNode* node) { candidates_.push_back({bb, node}); }
+    bool empty() const { return candidates_.empty(); }
 
     BoundingBox bounding_box_at(uint8_t i) const { return candidates_[i].bb; }
     uint8_t size() const { return static_cast<uint8_t>(candidates_.size()); }
