@@ -9,30 +9,11 @@
 #include "edge_ptr.hpp"
 
 class RTreeNode; // fwd decl
+struct TreeEntry;
 
 namespace reinsert_entries_config {
     constexpr uint16_t INITIAL_CAPACITY = 8; // was MIN
 }
-
-/*
- * A single entry collected during tree condensation/rebalancing: either an
- * orphaned internal node (RTreeNode, shared by both RTree and RStarTree) or
- * an orphaned leaf entry (EdgePtr), tagged with its former bounding box and
- * tree level (needed to reinsert at the correct level).
- *
- * The tree owns the EdgePtr *wrapper* (hence unique_ptr<EdgePtr> here), even
- * though EdgePtr's own src/dst/edge fields are non-owning pointers into
- * Graph's storage -- two independent ownership facts, not in tension.
- */
-struct TreeEntry {
-    BoundingBox b_box;
-    uint16_t tree_node_level;
-    variant<unique_ptr<RTreeNode>, unique_ptr<EdgePtr>> data;
-
-    bool is_data_entry() const noexcept {
-        return holds_alternative<unique_ptr<EdgePtr>>(data);
-    }
-};
 
 /*
  * Growable array of TreeEntry, used to collect and reinsert nodes/edges
@@ -45,10 +26,10 @@ public:
 
     // This function add an element to the reinsert entries vector
     void add(BoundingBox bb, uint16_t tree_node_level, unique_ptr<RTreeNode> node) {
-        entries_.push_back(TreeEntry{bb, tree_node_level, std::move(node)});
+        entries_.emplace_back(bb, std::move(node), tree_node_level);
     }
     void add(BoundingBox bb, uint16_t tree_node_level, unique_ptr<EdgePtr> edge) {
-        entries_.push_back(TreeEntry{bb, tree_node_level, std::move(edge)});
+        entries_.emplace_back(bb, std::move(edge), tree_node_level);
     }
     void add(TreeEntry entry) {
         entries_.push_back(std::move(entry));

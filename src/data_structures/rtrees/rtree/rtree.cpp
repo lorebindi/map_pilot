@@ -113,11 +113,11 @@ std::pair<std::unique_ptr<RTreeNode>, std::unique_ptr<RTreeNode>> quadratic_spli
 *     - split = true because the node was split.
 *     - replacement = the new parent node containing the two split groups.
 */
-InsertResult split_node_and_propagate(RTreeNode* node, BoundingBox rect, SplitEntry entry) {
+InsertResult split_node_and_propagate(RTreeNode* node, TreeEntry *new_entry) {
     assert(node != nullptr);
     assert(node->n_entries == rtree_config::MAX_ENTRIES);
 
-    auto [group1, group2] = quadratic_split(node, rect, std::move(entry));
+    auto [group1, group2] = quadratic_split(node, new_entry->b_box, std::move(new_entry->data));
 
     return {true, std::move(group1), std::move(group2)};
 }
@@ -163,23 +163,24 @@ InsertResult forward_split(RTreeNode* node, std::unique_ptr<RTreeNode> group1, s
 *  - 'e': pointer to the EdgePtr structure that wraps the graph edge and its endpoints.
 *  - 'is_root': boolean flag indicating whether 'node' is the root (important for split handling)
 */
-InsertResult RTree::insert_edge_internal(RTreeNode *node, BoundingBox rect, std::unique_ptr<EdgePtr> e) {
+InsertResult RTree::insert_edge_internal(RTreeNode *node, TreeEntry &new_entry) {
+    assert(new_entry.is_data_entry());
     if (node->is_leaf()) {
         if (node->n_entries < rtree_config::MAX_ENTRIES) {
-            node->insert_entry(rect, std::move(e));
+            node->insert_entry(new_entry.b_box, std::move(std::get<std::unique_ptr<EdgePtr>>(new_entry.data)));
             return {false, nullptr, nullptr};
         }
         else {
             // need to split the leaf returning the two new nodes
-            return split_node_and_propagate(node, rect, std::move(e));
+            return split_node_and_propagate(node, &new_entry);
         }
     }
     // Internal node: find the best child for insertion.
     // The best child is the one requiring the least enlargement of its bounding rectangle.
-    uint8_t best_child = get_area_min_enlargement_index(*node, node->n_entries, rect);
+    uint8_t best_child = get_area_min_enlargement_index(*node, node->n_entries, new_entry.b_box);
     auto& children = std::get<RTreeNode::InternalEntries>(node->entries);
     RTreeNode *original_child = children[best_child].get();
-    InsertResult result = insert_edge_internal(original_child, rect, std::move(e));
+    InsertResult result = insert_edge_internal(original_child, new_entry);
 
     // No split occurred: update the bounding rectangle and return.
     if (!result.split) {
@@ -195,7 +196,6 @@ InsertResult RTree::insert_edge_internal(RTreeNode *node, BoundingBox rect, std:
     else {
         return forward_split(node, std::move(result.group1), std::move(result.group2), best_child);
     }
-
 }
 
 /*
@@ -215,7 +215,11 @@ void RTree::insert_edge(const Node& src, const Node& dst, const Edge& edge) {
     BoundingBox bb = BoundingBox::from_points(src.lat, src.lon, dst.lat, dst.lon);
     auto e = std::make_unique<EdgePtr>(EdgePtr{&src, &dst, &edge});
 
-    InsertResult result = this->insert_edge_internal(this->root_.get(), bb, std::move(e));
+    TreeEntry new_entry;
+    new_entry.b_box = bb;
+    new_entry.data = std::move(e);
+
+    InsertResult result = this->insert_edge_internal(this->root_.get(), new_entry);
 
     if (result.split)
         create_new_root(std::move(result));
@@ -234,7 +238,7 @@ void RTree::insert_edge(const Node& src, const Node& dst, const Edge& edge) {
 *   - 'reinsert': wrapper holding the orphaned internal node and its bounding box metadata.
 *   - 'curr_level': current level depth of `node` during recursion (0 = root level).
 */
-InsertResult RTree::insert_internal_node(RTreeNode* node, const RTreeNode* best_parent, TreeEntry& reinsert, uint16_t curr_level) {
+InsertResult RTree::insert_internal_node(RTreeNode *node, const RTreeNode *best_parent, TreeEntry &reinsert, uint16_t curr_level) {
     assert(node != nullptr);
     assert(!reinsert.is_data_entry());
 
@@ -250,7 +254,7 @@ InsertResult RTree::insert_internal_node(RTreeNode* node, const RTreeNode* best_
             return {false, nullptr, nullptr};
         }
         // Otherwise we need to split the 'node' and propagate
-        return split_node_and_propagate(node, reinsert.b_box, std::move(std::get<std::unique_ptr<RTreeNode>>(reinsert.data)));
+        return split_node_and_propagate(node, &reinsert);
     }
     else {
         auto& children = std::get<RTreeNode::InternalEntries>(node->entries);

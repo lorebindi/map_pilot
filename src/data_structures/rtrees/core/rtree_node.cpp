@@ -41,6 +41,10 @@ void RTreeNode::insert_entry(const BoundingBox& bb, SplitEntry entry) {
     }, entry);
 }
 
+void RTreeNode::insert_entry(TreeEntry &&entry) {
+    insert_entry(entry.b_box, std::move(entry.data));
+}
+
 
 /*
  * Shifts all entries one position to the left starting from 'start_index',

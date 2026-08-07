@@ -53,7 +53,7 @@ struct BoundingBox {
     }
 
     // This function returns the bounding box of the overlapping area between 'b1' and 'b2'.
-    BoundingBox overlapping_bounding_box(BoundingBox& other) const noexcept {
+    BoundingBox overlapping_bounding_box(const BoundingBox& other) const noexcept {
         BoundingBox result{
             std::max(x_min, other.x_min), std::max(y_min, other.y_min),
             std::min(x_max, other.x_max), std::min(y_max, other.y_max)

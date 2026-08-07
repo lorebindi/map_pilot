@@ -92,7 +92,7 @@ protected:
     *  - 'e': pointer to the EdgePtr structure that wraps the graph edge and its endpoints.
     *  - 'is_root': boolean flag indicating whether 'node' is the root (important for split handling)
     */
-    virtual InsertResult insert_edge_internal(RTreeNode* node, BoundingBox rect, std::unique_ptr<EdgePtr> e) = 0;
+    virtual InsertResult insert_edge_internal(RTreeNode* node, TreeEntry &new_entry) = 0;
 
     /*
     * Reinserts an orphaned internal node into the tree at its designated parent location.

@@ -15,9 +15,43 @@ class RTreeNode;
 
 // Represents the new entry to insert during the split operation: either a EdgePtr or a RTreeNode.
 using SplitEntry = std::variant<
-    std::unique_ptr<EdgePtr>,
-    std::unique_ptr<RTreeNode>
+    std::unique_ptr<RTreeNode>,
+    std::unique_ptr<EdgePtr>
 >;
+
+/*
+ * A single entry collected during tree condensation/rebalancing: either an
+ * orphaned internal node (RTreeNode, shared by both RTree and RStarTree) or
+ * an orphaned leaf entry (EdgePtr), tagged with its former bounding box and
+ * tree level (needed to reinsert at the correct level).
+ *
+ * The tree owns the EdgePtr *wrapper* (hence unique_ptr<EdgePtr> here), even
+ * though EdgePtr's own src/dst/edge fields are non-owning pointers into
+ * Graph's storage -- two independent ownership facts, not in tension.
+ */
+struct TreeEntry {
+    BoundingBox b_box;
+    uint16_t tree_node_level;
+    variant<unique_ptr<RTreeNode>, unique_ptr<EdgePtr>> data;
+
+    TreeEntry() = default;
+
+    TreeEntry(BoundingBox b_box, unique_ptr<EdgePtr> data, uint16_t tree_node_level=std::numeric_limits<uint16_t>::max()) {
+        this->b_box = b_box;
+        this->tree_node_level = tree_node_level;
+        this->data = std::move(data);
+    }
+
+    TreeEntry(BoundingBox b_box, unique_ptr<RTreeNode> data, uint16_t tree_node_level=std::numeric_limits<uint16_t>::max()) {
+        this->b_box = b_box;
+        this->tree_node_level = tree_node_level;
+        this->data = std::move(data);
+    }
+
+    bool is_data_entry() const noexcept {
+        return holds_alternative<unique_ptr<EdgePtr>>(data);
+    }
+};
 
 /*
  * A single node in the R-tree.
@@ -63,6 +97,7 @@ public:
     void insert_entry(BoundingBox rect, std::unique_ptr<EdgePtr> edge);
     void insert_entry(BoundingBox rect, std::unique_ptr<RTreeNode> child);
     void insert_entry(const BoundingBox& bb, SplitEntry entry);
+    void insert_entry(TreeEntry &&entry);
 
     // It returns the bounding box of the i-th element
     BoundingBox bounding_box_at(uint8_t i) const { return bounding_rects[i]; }
@@ -126,5 +161,38 @@ public:
 private:
     bool is_leaf_;
 };
+
+
+// This function return the minimum bounding rectangle that includes each bounding box belonging to the 'bb_storage''s [start,end] range
+BoundingBox range_array_mbr(const std::array<TreeEntry*, rtree_config::MAX_ENTRIES + 1> &bb_storage, uint8_t start, uint8_t end) {
+    BoundingBox result = bb_storage[start]->b_box;
+    for (; start < end; start++) {
+        result = result.union_bounding_box(bb_storage[start]->b_box);
+    }
+    return result;
+}
+
+/*
+* Returns the perimeter (margin) of the minimum bounding rectangle that encloses all the bounding
+* boxes in 'bbs' starting from 'start' position.
+*/
+inline float calculate_margin(const std::array<TreeEntry*, rtree_config::MAX_ENTRIES + 1> &entries, uint8_t first, uint8_t last) {
+    assert(first < last);
+    assert(last <= entries.size());
+
+    float xmin = std::numeric_limits<float>::max();
+    float ymin = std::numeric_limits<float>::max();
+    float xmax = std::numeric_limits<float>::lowest();
+    float ymax = std::numeric_limits<float>::lowest();
+
+    for (uint8_t i = first; i < last; ++i) {
+        xmin = std::min(xmin, entries[i]->b_box.x_min);
+        ymin = std::min(ymin, entries[i]->b_box.y_min);
+        xmax = std::max(xmax, entries[i]->b_box.x_max);
+        ymax = std::max(ymax, entries[i]->b_box.y_max);
+    }
+
+    return (xmax - xmin) + (ymax - ymin);
+}
 
 #endif

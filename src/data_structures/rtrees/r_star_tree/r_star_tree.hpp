@@ -41,7 +41,7 @@ protected:
     *   - 'reinsert': wrapper holding the orphaned internal node and its bounding box metadata.
     *   - 'curr_level': current level depth of `node` during recursion (0 = root level).
     */
-    InsertResult insert_edge_internal(RTreeNode* node, BoundingBox rect, std::unique_ptr<EdgePtr> e) override;
+    InsertResult insert_edge_internal(RTreeNode *node, TreeEntry &new_entry) override;
 
     /*
     * Reinserts an orphaned internal node into the tree at its designated parent location.
@@ -56,22 +56,7 @@ protected:
     *   - 'reinsert': wrapper holding the orphaned internal node and its bounding box metadata.
     *   - 'curr_level': current level depth of `node` during recursion (0 = root level).
     */
-    InsertResult insert_internal_node(RTreeNode* node, const RTreeNode* best_parent, TreeEntry& reinsert, uint16_t curr_level) override;
-
-    /*
-    * Reinsert all the entry (data entry or internal node entry) inside 'to_reinsert' in the
-    * rtree starting from 'root'.
-    *
-    * This function ensures that all orphaned entries are correctly placed back into
-    * the R-tree/R*tree while maintaining its structural and bounding-box properties.
-    *
-    *
-    * Note: due to the splitting process, can change the root
-    *
-    * Parameters:
-    *  - 'to_reinsert': pointer to the array of the R-tree node have to be reinsert.
-    */
-    void reinsert_nodes(ReinsertEntries& to_reinsert) override;
+    InsertResult insert_internal_node(RTreeNode *node, const RTreeNode *best_parent, TreeEntry &reinsert, uint16_t curr_level) override;
 
 private:
 
@@ -113,7 +98,7 @@ private:
     *    result (attaching to the parent, or promoting to a new root via
     *    create_new_root() if curr_level == 0).
     */
-    InsertResult overflow_treatment(RTreeNode* node, TreeEntry new_entry, uint16_t curr_level);
+    InsertResult overflow_treatment(RTreeNode *node, TreeEntry &new_entry, uint16_t curr_level);
 
     /*
     * Removes the p entries farthest from node's MBR center, among node's
@@ -131,7 +116,7 @@ private:
     * Returns true if 'entry' itself was among the p removed (i.e. it was never
     * physically inserted into 'node' and the caller must not insert it either).
     */
-    bool remove_farthest_entries(RTreeNode* node, TreeEntry entry, uint16_t p, uint16_t curr_level);
+    bool remove_farthest_entries(RTreeNode *node, TreeEntry &entry, uint16_t p, uint16_t curr_level);
 
     /*
     * Performs the forced reinsertion strategy used by the R*-tree overflow
@@ -153,7 +138,7 @@ private:
     *  - 'entry': new entry that triggered the overflow.
     *  - 'curr_level': current level of the node in the tree (root level = 0).
     */
-    void forced_reinsert(RTreeNode* node, TreeEntry entry, uint16_t curr_level);
+    void forced_reinsert(RTreeNode* node, TreeEntry &entry, uint16_t curr_level);
 };
 
 #endif //R_STAR_TREE_HPP
